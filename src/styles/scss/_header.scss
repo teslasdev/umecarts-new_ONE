@@ -29,9 +29,7 @@
         }
         &-logo {
             width: auto;
-            @include respond(phone) {
-                width: 130px;
-            }
+
         }
 
         &-search {
