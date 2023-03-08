@@ -1,0 +1,40 @@
+.um-product {
+    @apply my-6;
+    &-header {
+        @apply h-[30%];
+    }
+
+    &-box {
+        border: 1px solid #F0F7FF;
+        border-radius: 6px;
+        width: 185px;
+        margin-top: 20px;
+        cursor: pointer;
+        display: block;
+    }
+
+    &-badge {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--light-red);
+        font-size: 10px;
+        color: var(--primary-red);
+        @apply flex items-center justify-center font-bold;
+    }
+
+    &-range {
+        background-color: var(--tertiary-red);
+        height: 10px;
+        @apply rounded-full;
+    }
+}
+
+.um-category {
+    @apply flex flex-col items-center gap-3 flex-wrap;
+    &-img {
+        width: 183px;
+        height: 183px;
+        @apply flex flex-col items-center justify-center rounded-full;
+    }
+}

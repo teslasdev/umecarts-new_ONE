@@ -1,0 +1,88 @@
+@import '_media.scss';
+.um {
+
+    &-header {
+        /* Black/White */
+        background: var(--color-white);
+        box-shadow: 0px 4px 12px rgba(0, 18, 41, 0.1);
+        
+        &-box {
+            width: 100%;
+            @apply flex justify-between  sm:px-24 px-4 items-center;
+            height: 93px;
+            border-bottom: 1px solid #94A3B8;
+            @include respond(phone) {
+                height: 53px;
+            }
+        }
+
+        &-box1 {
+            border-bottom: 1px solid #94A3B8;
+            height: 37px;
+            background-color: var(--color-white);
+            @apply flex justify-between items-center px-24;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1F3047;
+
+        }
+        &-logo {
+            width: auto;
+            @include respond(phone) {
+                width: 130px;
+            }
+        }
+
+        &-search {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            input {
+                width: 442px;
+                height: 40px;
+                background: #FFFFFF;
+                border: 1.5px solid #94A3B8;
+                border-radius: 8px 0px 0px 8px;
+                outline: none;
+                @apply pl-3;
+            }
+
+            span {
+                width: 58px;
+                height: 40px;
+                background: #CA0505;
+                border: 1px solid #CA0505;
+                border-radius: 0px 8px 8px 0px;
+                @apply flex justify-center items-center text-2xl cursor-pointer;
+                color: var(--color-white);
+
+            }
+        }
+
+        &-options {
+            display: flex;
+            align-items: center;
+            @apply gap-2;
+        }
+
+        &-button {
+            @apply flex items-center justify-center gap-2 font-bold;
+            width: 100px;
+            height: 50px;
+            background: #CA0505;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        &-seller {
+            @apply text-sm font-bold;
+            text-decoration: underline;
+            
+        }
+
+       
+    }
+
+}

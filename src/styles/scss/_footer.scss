@@ -1,0 +1,64 @@
+.um-footer {
+    background: #001229;
+    
+
+    &-social {
+        width: 30px;
+        height: 30px;
+        @apply flex items-center justify-center rounded-full;
+    }
+
+    &-facebook {
+        background: #3B5998;
+    }
+
+    &-twitter {
+        background: #1DA1F2;
+    }
+
+    &-instagram {
+        background: #BD32A2;
+    }
+
+    &-youtube {
+        background: #FF0000;
+    }
+
+    &-linkedin {
+        background: #0070AC;
+    }
+    &-google {
+        background: #F2F2F2;
+    }
+
+    &-pre {
+        height: 306px;
+        background-color: #1F3047;
+        &-search {
+            display: flex;
+            align-items: center;
+
+            input {
+                width: 287px;
+                height: 40px;
+                background: #FFFFFF;
+                border: 1.5px solid #94A3B8;
+                border-radius: 8px 0px 0px 8px;
+                outline: none;
+                @apply pl-3;
+            }
+
+            span {
+                width: 106px;
+                height: 40px;
+                background: #CA0505;
+                border: 1px solid #CA0505;
+                border-radius: 0px 8px 8px 0px;
+                @apply flex justify-center items-center capitalize cursor-pointer;
+                @layer text-md;
+                color: var(--color-white);
+
+            }
+        }
+    }
+}

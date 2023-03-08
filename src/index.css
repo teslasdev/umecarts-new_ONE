@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-red:#CA0505;
+  --secondary-red:#F52424;
+  --tertiary-red:#FA9E9E;
+  --light-red:#FEF0F0;
+  /* Blue */
+  --primary-blue:#002C66;
+  --secondary-blue:#004399;
+  --tertiary-blue:#99C5FF;
+  --light-blue:#F0F7FF;
+
+   /*Green  */
+   --primary-green:#017E4D;
+   --secondary-green:#02BD73;
+   --tertiary-green:#9AFED6;
+
+   /*Orange  */
+   --primary-orange:#EB8918;
+   --secondary-orange:#EF9F43;
+   --tertiary-orange:#F7CFA1;
+
+   /*Dark blue  */
+   --dark-primary-blue:#001229;
+   --dark-secondary-blue:#1F3047;
+   --dark-tertiary-blue:#2E486B;
+   --dark-light-blue:#94A3B8;
+
+   /* Common Colors */
+   --color-white:#FFFFFF;
+   --color-BLACK:#000000;
+   --color-grey:#eee;
+    /* padding */
+    --site-pad-top-desktop:10px;
+}
+* > * {
+    font-family: 'Mulish',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;  
+}
