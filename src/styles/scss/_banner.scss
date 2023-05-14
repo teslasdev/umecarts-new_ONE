@@ -32,6 +32,14 @@
                 font-size: 8px;
                 @apply flex justify-center items-center p-4 rounded-md;
             }
+            &-box {
+                border: 1px solid #F0F7FF;
+                border-radius: 6px;
+                margin-top: 20px;
+                cursor: pointer;
+                display: block;
+                @apply min-w-[130px]
+            }
         }
     }
 

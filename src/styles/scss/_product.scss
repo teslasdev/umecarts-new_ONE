@@ -1,16 +1,17 @@
 .um-product {
     @apply my-6;
+    background: #fff;
     &-header {
-        @apply h-[30%];
+        @apply h-[30%] sm:text-xl text-[16px];
     }
 
     &-box {
         border: 1px solid #F0F7FF;
         border-radius: 6px;
-        width: 185px;
         margin-top: 20px;
         cursor: pointer;
         display: block;
+        @apply min-w-[185px]
     }
 
     &-badge {
@@ -28,13 +29,93 @@
         height: 10px;
         @apply rounded-full;
     }
+    &-caret {
+        @apply py-2 sm:px-6 px-1;
+    }
+    &-caret::-webkit-scrollbar {
+        height: 0px;
+    }
+
+    &-reading {
+        width: 40px;
+        height: 40px;
+        background: #F0F7FF;
+        border-radius: 24px;
+        cursor: pointer;
+        @apply flex justify-center items-center
+    }
 }
 
 .um-category {
-    @apply flex flex-col items-center gap-3 flex-wrap;
+    @apply flex flex-col items-center sm:py-0 py-6 gap-3 flex-wrap;
     &-img {
         width: 183px;
         height: 183px;
-        @apply flex flex-col items-center justify-center rounded-full;
+        @apply flex flex-col items-center justify-center rounded-full sm:w-[183px] sm:h-[183px] w-[70px] h-[70px];
     }
 }
+
+
+.um-cart {
+    &-border-outline {
+        border: 2.3px solid var(--primary-blue);
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        position: relative;
+        @apply flex;
+
+        &-clicked::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: var(--primary-blue);
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;  
+        }
+
+    }
+
+    &-border-rounded {
+        border: 2.3px solid var(--primary-blue);
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        position: relative;
+        @apply flex;
+
+        &-clicked::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: var(--primary-blue);
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;  
+        }
+
+    }
+
+    &-img-small {
+        width: 80px;
+        height: 80px;
+    }
+
+    &-delete {
+        width: 40px;
+        height: 40px;
+        background: #F0F7FF;
+        border-radius: 24px;
+        cursor: pointer;
+        @apply flex justify-center items-center
+    }
+
+
+}
+
+

@@ -1,7 +1,4 @@
 import React from 'react'
-import {RxCaretRight} from 'react-icons/rx'
-
-
 const data = [
     {
         "id": 1,
@@ -77,41 +74,24 @@ const data = [
     }
 ]
 
-const Category = () => {
+const Category1 = () => {
   return (
     <>
-        <div className='um-product rounded-sm shadow-md'>
-            <div className='um-product-header flex justify-between px-2 py-4 w-full items-center rounded-t-md bg-red-200'>
-                <div>
-                    <p className='font-bold text-xl'>Shop Categories</p>
-                </div>
-
-                <div className='relative um-header-button cursor-pointer'>
-                    <span>
-                        View
-                    </span>
-                    <span className='font-bold'>
-                        <RxCaretRight />
-                    </span>
-                </div>
-            </div>
-
-            <div className='um-product-caret  flex w-full gap-6 sm:overflow-hidden overflow-x-scroll'>
-                {data.map((item) => {
-                    return (
-                        <div className="um-category" key={data.id}>
-                            <div className="um-category-img" style={{background : `${item.color}`}}>
-                                <img src={item.image} alt="" />
-                            </div>
-
-                            <h5 className='font-bold'>{item.name}</h5>
+        <div className='um-product-caret flex w-full gap-6 sm:overflow-hidden overflow-x-scroll'>
+            {data.map((item) => {
+                return (
+                    <div className="um-category" key={data.id}>
+                        <div className="um-category-img" style={{background : `${item.color}`}}>
+                            <img src={item.image} alt="" className='sm:w-full w-[40px]'/>
                         </div>
-                    )
-                })}
-            </div>
+
+                        <h5 className='font-bold sm:text-md text-sm'>{item.name}</h5>
+                    </div>
+                )
+            })}
         </div>
     </>
   )
 }
 
-export default Category
+export default Category1

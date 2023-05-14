@@ -10,7 +10,7 @@
         display: flex;
         @apply items-center text-sm gap-2;
         height: 50px;
-        @apply sm:px-24 px-4 bg-white;
+        @apply sm:px-24 px-4;
     }
 
     &-box {

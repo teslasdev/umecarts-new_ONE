@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React ,{useState , useEffect} from 'react'
 import {useMediaQuery} from 'react-responsive'
 import logo from '../../assets/logo/Vector.png';
 import {AiOutlineSearch } from 'react-icons/ai'
@@ -8,15 +8,29 @@ import { Link } from 'react-router-dom';
 import {HiBars3BottomLeft} from 'react-icons/hi2'
 
 const Header = () => {
-    const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'})
-    const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
     const isTabletOrMobile = useMediaQuery({ query: '(min-width: 544px)' })
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-    const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
     const [toggleOption, setToggleOption] = useState(false)
+
+    const [scrollDirection, setScrollDirection] = useState(null);
+    useEffect(() => {
+        let lastScrollY = window.pageYOffset;
+        var  direction;
+        direction = lastScrollY > 300 ? 'down' : 'up';
+        setScrollDirection(direction);
+        const updateScrollDirection = () => {
+          const scrollY = window.pageYOffset;
+          direction = scrollY > lastScrollY ? "down" : "up";
+          setScrollDirection(direction);
+        };
+        window.addEventListener("scroll", updateScrollDirection); // add event listener
+        return () => {
+          window.removeEventListener("scroll", updateScrollDirection); // clean up
+        }
+      }, [scrollDirection]);
   return (
     <>
-        <header className="um-header">
+        <header className={`um-header ${scrollDirection === 'down' && 'fixed z-30' } w-full`} data-aos="fade-down">
             {isTabletOrMobile &&
                 <div className="um-header-box flex">
                     <img src={logo}  className='um-header-logo' />

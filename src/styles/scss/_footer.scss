@@ -32,11 +32,13 @@
     }
 
     &-pre {
-        height: 306px;
+        @apply sm:h-[306px];  
         background-color: #1F3047;
+        width: 100%;
         &-search {
             display: flex;
             align-items: center;
+            width: 100%;
 
             input {
                 width: 287px;
@@ -45,7 +47,7 @@
                 border: 1.5px solid #94A3B8;
                 border-radius: 8px 0px 0px 8px;
                 outline: none;
-                @apply pl-3;
+                @apply pl-3 sm:w-[287px] w-[90%];
             }
 
             span {
@@ -59,6 +61,22 @@
                 color: var(--color-white);
 
             }
+           
+        }
+       
+    }
+    &-form {
+        @apply m-6 sm:text-start text-center;
+    
+    }
+    &-information {
+        font-size: 18px;
+    }
+    &-navigation {
+        padding: 8px 16px 12px;
+        p {
+            font-size: 12px;
+            @apply pt-1 font-semibold;
         }
     }
 }

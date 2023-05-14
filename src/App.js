@@ -1,14 +1,17 @@
 import React from 'react'
 import { createBrowserRouter,RouterProvider} from 'react-router-dom'
-import { Home,User,Auth,Account } from './components'
+import { Home,User,Auth,Account, Product } from './components'
 
 
 import './styles/base.scss'
+import AOS from 'aos'
+import Cart from './components/pages/Cart'
 
 
 
 
 const App = () => {
+    AOS.init();
     const router = createBrowserRouter([
       {  
         path : '/',
@@ -34,8 +37,15 @@ const App = () => {
       {  
         path : '/forgotPassword',
         element : <Account auth="forget"/>
+      },
+      {  
+        path : '/product/:id',
+        element : <Product/>
+      },
+      {  
+        path : '/cart',
+        element : <Cart />
       }
-
     ])
   return (
     <>

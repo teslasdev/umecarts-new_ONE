@@ -1,5 +1,5 @@
 import React from 'react'
-import Badge from '../common/Badge'
+import { Badge } from '../common/Badge'
 import {BiErrorCircle} from 'react-icons/bi'
 import Button from '../common/Button'
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Badge from '../common/Badge'
+import { Badge } from '../common/Badge'
 import {BiErrorCircle} from 'react-icons/bi'
 import {AiOutlineEye,AiOutlineEyeInvisible} from 'react-icons/ai'
 import {MdCheckBox,MdCheckBoxOutlineBlank} from 'react-icons/md'

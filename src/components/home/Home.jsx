@@ -1,4 +1,5 @@
 import React from 'react'
+import {useMediaQuery} from 'react-responsive'
 import Layout from '../layout/Layout'
 import Banner from './banner/Banner'
 import Banner2 from './banner/Banner2'
@@ -9,11 +10,12 @@ import Feature1 from './product/Feature1'
 
 
 const Home = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(min-width: 544px)' })
   return (
     <div>
         <>
             <Layout>
-              <div className='sm:px-32 px py-8'>
+              <div className='sm:px-32 px-2 py-8'>
                 <Banner />
                 <Banner2 />
                 <Feature />
@@ -21,7 +23,9 @@ const Home = () => {
                 <Feature1 />
                 <Feature />
                 <Banner3 />
-                <Category />
+                {
+                  isTabletOrMobile &&  <Category />
+                }
                 <Feature />
                 <Feature />
               </div>
