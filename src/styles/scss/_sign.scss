@@ -29,6 +29,14 @@
         border: 1.5px solid #94A3B8;
         border-radius: 8px;
         outline: none;
+
+        &-dropdown {
+            @apply flex justify-between items-center pr-1 pl-4;
+            height: 52px;
+            border: 1.5px solid #94A3B8;
+            border-radius: 8px;
+            outline: none;
+        }
     }
 
     &-icon {

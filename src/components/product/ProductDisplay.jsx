@@ -36,7 +36,7 @@ const ProductDisplay = () => {
     return (
         <>
             {scrollDirection === 'down' && 
-            <div className='bg-white fixed z-40 top-[18%] w-full px-24 flex justify-between items-center' data-aos="fade-down">
+            <div className='bg-white fixed z-40 top-[16%] w-full px-24 md:flex hidden justify-between items-center' data-aos="fade-down">
                 <div className='flex gap-4 font-bold p-3'>
                     <a href='#description' className='p-2 uppercase border-bottom-red text-black'>Product Description</a>
                     <a href='#review' className='p-2 uppercase text-black'>Ratings and Reviews</a>
@@ -51,28 +51,41 @@ const ProductDisplay = () => {
             </div>
             }
             <div className='sm:px-32 px-2 py-8'>
-                <div className='flex gap-6'>
-                    <div className='w-[75%] flex flex-col gap-4'>
-                        <div className='flex gap-6 bg-white shadow-md rounded-md p-2'>
-                            <div className='w-[35%] py-2'>
-                                <div className='w-full h-[295px] rounded-lg'>
+                <div className='flex flex-col md:flex-row gap-6'>
+                    <div className='md:w-[75%] w-full flex flex-col gap-4'>
+                        <div className='flex flex-col md:flex-row gap-6 bg-white shadow-md rounded-md p-2'>
+                            <div className='w-full md:w-[35%] py-2'>
+                                <div className='w-full h-[374px] md:h-[295px] rounded-lg'>
                                     <img src={product} alt="" className='rounded-lg w-full h-full'/>
                                 </div>
-                                <div className='flex my-4 gap-4'>
-                                    <div className='h-[60px] w-[60px] rounded-lg'>
-                                        <img src={product} alt="" className='rounded-lg w-full h-full'/>
-                                    </div>
+                                <div className='flex justify-center overflow-scroll w-full md:justify-start my-4 gap-4'>
+                                    <div className='flex gap-4'>
+                                        <div className='h-[60px] w-[60px]  rounded-lg'>
+                                            <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        </div>
 
-                                    <div className='h-[60px] w-[60px] rounded-lg'>
-                                        <img src={product} alt="" className='rounded-lg w-full h-full'/>
-                                    </div>
+                                        <div className='h-[60px] w-[60px] rounded-lg'>
+                                            <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        </div>
 
-                                    <div className='h-[60px] w-[60px] rounded-lg'>
-                                        <img src={product} alt="" className='rounded-lg w-full h-full'/>
-                                    </div>
+                                        <div className='h-[60px] w-[60px] rounded-lg'>
+                                            <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        </div>
 
-                                    <div className='h-[60px] w-[60px] rounded-lg'>
-                                        <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        <div className='h-[60px] w-[60px] rounded-lg'>
+                                            <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        </div>
+                                        <div className='h-[60px] w-[60px] rounded-lg'>
+                                            <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        </div>
+
+                                        <div className='h-[60px] w-[60px] rounded-lg'>
+                                            <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        </div>
+
+                                        <div className='h-[60px] w-[60px] rounded-lg'>
+                                            <img src={product} alt="" className='rounded-lg w-full h-full'/>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -115,8 +128,20 @@ const ProductDisplay = () => {
                                 </div>
                             </div>
 
-                            <div className='w-[65%] flex flex-col gap-6'>
-                                <h1 className='font-extrabold text-3xl h-[30px]'>Unisex sweatshirt</h1>
+                            <div className='md:w-[65%] w-full flex flex-col gap-6'>
+                                <h1 className='font-extrabold text-3xl h-[15px] md:h-[30px]'>Unisex sweatshirt</h1>
+                                <div className='flex md:none items-center gap-2'>
+                                    <div className='flex gap-4 items-center'>
+                                        <span className='text-[#FFCD29]'> <FaStar size={20}/></span>
+                                        <span className='text-[#FFCD29]'> <FaStar size={20}/></span>
+                                        <span className='text-[#FFCD29]'> <FaStar size={20}/></span>
+                                        <span className='text-[#FFCD29]'> <FaStar size={20}/></span>
+                                        <span className='text-[#FFCD29]'> <FaStarHalfAlt size={20}/></span>
+                                    </div>
+                                    <div className='flex  items-center font-normal text-[12px] text-tertiary' >
+                                        <span>(20 reviews)</span>
+                                    </div>
+                                </div>
                                 <div>
                                     <span>Price</span>
                                     <div className='flex items-end gap-4'>
@@ -168,7 +193,7 @@ const ProductDisplay = () => {
                             </div>
                         </div>
                         
-                        <div className={`${scrollDirection === 'down' && 'pt-[200px]' }`} id='description'>
+                        <div>
                             <div className='flex flex-col gap-2 bg-white shadow-md rounded-md p-2'>
                                 {/* <div className='flex gap-4'>
                                     <button className='p-2 uppercase'>Product Description</button>
@@ -186,9 +211,9 @@ const ProductDisplay = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={`${scrollDirection === 'down' && 'pt-[200px]' }`} id='review'>
-                            <div className='flex gap-10 bg-white shadow-md rounded-md p-4'>
-                                <div className='flex flex-col gap-2 w-[40%]'>
+                        <div>
+                            <div className='flex flex-col md:flex-row gap-10 bg-white shadow-md rounded-md p-4'>
+                                <div className='flex flex-col gap-2 w-full md:w-[40%]'>
                                     <h4 className='text-sm text-secondary font-bold'>Overview</h4>
                                     <div className='flex gap-2 items-center'>
                                         <span className='text-[#FFCD29]'> <FaStar size={24}/></span>
@@ -218,7 +243,7 @@ const ProductDisplay = () => {
                                                 <span className='text-[#FFCD29]'> <FaStar size={16}/></span>
                                                 <span className='text-[#FFCD29]'> <FaStar size={16}/></span>
                                             </div>
-                                            <span>(20)</span>
+                                            <span>(20 Buyers)</span>
                                         </div>
                                         <div className='flex gap-2'>
                                             <h2 className='text-md font-extrabold'>4.0</h2>
@@ -229,7 +254,7 @@ const ProductDisplay = () => {
                                                 <span className='text-[#FFCD29]'> <FaStar size={16}/></span>
                                                 <span className='text-[#FFCD29]'> <FaStarHalfAlt size={16}/></span>
                                             </div>
-                                            <span>(20)</span>
+                                            <span>(20 Buyers)</span>
                                         </div>
                                         <div className='flex gap-2'>
                                             <h2 className='text-md font-extrabold'>4.0</h2>
@@ -240,7 +265,7 @@ const ProductDisplay = () => {
                                                 <span className='text-[#FFCD29]'> <FaStar size={16}/></span>
                                                 <span className='text-[#f3f3f3]'> <FaStar size={16}/></span>
                                             </div>
-                                            <span>(20)</span>
+                                            <span>(20 Buyers)</span>
                                         </div>
                                         <div className='flex gap-2'>
                                             <h2 className='text-md font-extrabold'>3.0</h2>
@@ -251,7 +276,7 @@ const ProductDisplay = () => {
                                                 <span className='text-[#f3f3f3]'> <FaStar size={16}/></span>
                                                 <span className='text-[#f3f3f3]'> <FaStar size={16}/></span>
                                             </div>
-                                            <span>(20)</span>
+                                            <span>(20 Buyers)</span>
                                         </div>
                                         <div className='flex gap-2'>
                                             <h2 className='text-md font-extrabold'>2.0</h2>
@@ -262,7 +287,7 @@ const ProductDisplay = () => {
                                                 <span className='text-[#f3f3f3]'> <FaStar size={16}/></span>
                                                 <span className='text-[#f3f3f3]'> <FaStar size={16}/></span>
                                             </div>
-                                            <span>(20)</span>
+                                            <span>(20 Buyers)</span>
                                         </div>
                                         <div className='flex gap-2'>
                                             <h2 className='text-md font-extrabold'>1.0</h2>
@@ -273,7 +298,7 @@ const ProductDisplay = () => {
                                                 <span className='text-[#f3f3f3]'> <FaStar size={16}/></span>
                                                 <span className='text-[#f3f3f3]'> <FaStar size={16}/></span>
                                             </div>
-                                            <span>(20)</span>
+                                            <span>(20 Buyers)</span>
                                         </div>
                                         </div>
                                 </div>
@@ -335,7 +360,7 @@ const ProductDisplay = () => {
                         </div>
                     </div>
 
-                    <div className='w-[20%] flex flex-col gap-4'>
+                    <div className='w-[20%] hidden md:flex flex-col gap-4'>
                         <div className='bg-white rounded-md'>
                             <h3 className='uppercase flex justify-start items-center font-bold pl-6 h-[40px]'>Refund Policy</h3>
                             <hr />
@@ -504,7 +529,18 @@ const ProductDisplay = () => {
                 <Feature1 />
             </div> 
 
-            {handleModal &&  <FullModal Style="w-[60%]"  Label="Please select a variation"/>}
+            {handleModal ?  
+                <FullModal Style="w-[60%]"  Label="Please select a variation" onclick={()=> setModal(!handleModal)}/>
+            :
+                <div className='fixed block md:hidden bottom-0 bg-white p-3 min-h-[100px] z-50 w-screen'>
+                    <div className='flex justify-between w-full'>
+                        <button className='bg-blue-secondary text-lg flex items-center justify-center gap-3 w-[45%] text-white h-[56px] rounded-md' onClick={() => setModal(!handleModal)}><FiShoppingCart /> Add to Cart</button>
+                        <button className='bg-red-secondary text-lg flex items-center justify-center gap-3 w-[45%] text-white h-[56px] rounded-md' onClick={() => setModal(!handleModal)}><SlHandbag/> Buy Now</button>
+                    </div>
+                </div>
+            }
+            
+           
         </>
     )
 }

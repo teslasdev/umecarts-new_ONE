@@ -20,33 +20,37 @@ export const Badge = (props) => {
 }
 
 
-export const CartBadge = ({}) => {
+export const CartBadge = ({
+  data,
+  sizeIcon,
+  setCaret,
+}) => {
   return (
     <>
-      <div className='w-full py-6 flex justify-center items-center gap-5 text-[#ccc]'>
-        <div className='flex justify-center items-center flex-col'>
-          <FiShoppingCart size={40}/>
-          <p className='text-xs'>1. My cart</p>
+      <div className='w-full py-6 flex justify-center items-center gap-2 md:gap-5 text-[#ccc]'>
+        <div className='flex justify-center items-center flex-col text-[#CA0505]'>
+          <FiShoppingCart size={sizeIcon}/>
+          <p className='text-[8px] md:text-xs'>1. My cart</p>
         </div>
-        <RxCaretRight size={30} />
+        <RxCaretRight size={setCaret} />
         <div className='flex justify-center items-center flex-col'>
-          <IoLocationOutline size={40}/>
-          <p className='text-xs'>2. Shipping info</p>
+          <IoLocationOutline size={sizeIcon}/>
+          <p className='text-[8px] md:text-xs'>2. Shipping info</p>
         </div>
-        <RxCaretRight size={30} />
+        <RxCaretRight size={setCaret} />
         <div className='flex justify-center items-center flex-col'>
-          <TbTruckDelivery size={40}/>
-          <p className='text-sm'>3. Delivery info</p>
+          <TbTruckDelivery size={sizeIcon}/>
+          <p className='text-[8px] md:text-xs'>3. Delivery info</p>
         </div>
-        <RxCaretRight size={30} />
+        <RxCaretRight size={setCaret} />
         <div className='flex justify-center items-center flex-col'>
-          <CgCreditCard size={40}/>
-          <p className='text-sm'>4. Payment</p>
+          <CgCreditCard size={sizeIcon}/>
+          <p className='text-[8px] md:text-xs'>4. Payment</p>
         </div>
-        <RxCaretRight size={30} />
+        <RxCaretRight size={setCaret} />
         <div className='flex justify-center items-center flex-col'>
-          <BsCheck2Circle size={40}/>
-          <p className='text-sm'>5. Confirmation</p>
+          <BsCheck2Circle size={sizeIcon}/>
+          <p className='text-[8px] md:text-xs'>5. Confirmation</p>
         </div>
       </div>
     </>
