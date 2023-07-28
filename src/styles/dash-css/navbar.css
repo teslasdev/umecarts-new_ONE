@@ -1,6 +1,8 @@
 .dash-navbar-container {
   background: #ffffff;
   padding: 10px 8rem;
+  width: 100%;
+  border-bottom: 1px solid #d5d8dc;
 }
 .um-grov-logo {
   width: 60px;
@@ -63,4 +65,65 @@
 }
 .dash-ico {
   font-size: 20px;
+  transform: rotate(-15deg);
+}
+.dash-menu {
+  font-size: 30px;
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .dash-navbar-container {
+    padding: 10px 2rem;
+  }
+  .notif-txt {
+    display: none;
+  }
+  .dash-ico {
+    font-size: 30px;
+  }
+  .not-count {
+    margin-left: -12px;
+    margin-top: -15px;
+  }
+  .dash-menu {
+    display: initial;
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .dash-navbar-container {
+    padding: 10px 20px;
+  }
+  .um-grov-logo {
+    width: 45px;
+  }
+  .grov-image-mill {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .dash-navbar-container {
+    padding: 10px 15px 10px 10px;
+  }
+  .um-grov-logo {
+    width: 45px;
+  }
+  .grov-image-mill {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .dash-ico {
+    font-size: 25px;
+  }
+  .not-count {
+    margin-left: -12px;
+    margin-top: -15px;
+  }
+  .dash-menu {
+    font-size: 25px;
+    margin-left: 6px;
+  }
 }

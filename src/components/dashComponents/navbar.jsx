@@ -1,6 +1,7 @@
 import "../../styles/dash-css/navbar.css";
 import logo from "../../assets/logo/Vector.png";
 import { AiOutlineBell } from "react-icons/ai";
+import { HiMenuAlt2 } from "react-icons/hi";
 import grove from "../../assets/image/grovlogo.png";
 const DashNavbar = () => {
   return (
@@ -30,6 +31,7 @@ const DashNavbar = () => {
           <AiOutlineBell className="dash-ico" />
           <div className="notif-txt">Notifications</div>
           <div className="not-count">1</div>
+          <HiMenuAlt2 className="dash-menu" />
         </div>
       </div>
     </div>
