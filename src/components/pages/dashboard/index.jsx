@@ -2,6 +2,7 @@ import DashSidebar from "../../dashComponents/dashSidebar";
 import DashNavbar from "../../dashComponents/navbar";
 import "../../../styles/dash-css/style.css";
 import MainSide from "../../dashComponents/mainSide";
+import DashFooter from "../../dashComponents/dashFooter";
 
 const Dashboard = () => {
   return (
@@ -11,6 +12,7 @@ const Dashboard = () => {
         <DashSidebar />
         <MainSide />
       </div>
+      <DashFooter />
     </div>
   );
 };
