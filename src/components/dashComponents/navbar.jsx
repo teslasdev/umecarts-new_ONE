@@ -3,7 +3,7 @@ import logo from "../../assets/logo/Vector.png";
 import { AiOutlineBell } from "react-icons/ai";
 import { HiMenuAlt2 } from "react-icons/hi";
 import grove from "../../assets/image/grovlogo.png";
-const DashNavbar = () => {
+const DashNavbar = ({ handleToggleIcon }) => {
   return (
     <div className="dash-navbar-container">
       <div className="logo-image">
@@ -31,7 +31,7 @@ const DashNavbar = () => {
           <AiOutlineBell className="dash-ico" />
           <div className="notif-txt">Notifications</div>
           <div className="not-count">1</div>
-          <HiMenuAlt2 className="dash-menu" />
+          <HiMenuAlt2 className="dash-menu" onClick={handleToggleIcon} />
         </div>
       </div>
     </div>

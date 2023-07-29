@@ -1,12 +1,12 @@
 import "../../styles/dash-css/sidebar.css";
 import { BsGrid, BsHandbag, BsCart, BsCloudUpload } from "react-icons/bs";
-import { BiMessageDots } from "react-icons/bi";
+import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
 import { PiWarningCircleBold } from "react-icons/pi";
 import { TiDocumentText } from "react-icons/ti";
 import { MdPayment, MdOutlineSettings } from "react-icons/md";
-const DashSidebar = () => {
+const DashSidebar = ({ toggleIcon }) => {
   return (
     <div className="dash-sidebar-container">
       <div className="sidebar-box">
@@ -25,7 +25,7 @@ const DashSidebar = () => {
           <div className="sidebar-text">Orders</div>
         </div>
         <div className="sidebar-item-box">
-          <BiMessageDots />
+          <IoChatboxEllipsesOutline />
           <div className="sidebar-text">Message</div>
         </div>
         <div className="sidebar-item-box">

@@ -3,16 +3,33 @@ import DashNavbar from "../../dashComponents/navbar";
 import "../../../styles/dash-css/style.css";
 import MainSide from "../../dashComponents/mainSide";
 import DashFooter from "../../dashComponents/dashFooter";
+import { useState } from "react";
+import DashNavigator from "../../dashComponents/dashNavigation";
+import MobileMenu from "../../dashComponents/mobileMenu";
 
 const Dashboard = () => {
+  const [toggleIcon, setToggleIcon] = useState(false);
+  const handleToggleIcon = () => {
+    setToggleIcon(true);
+  };
+  const handleCloseToggleIcon = () => {
+    setToggleIcon(false);
+  };
   return (
     <div className="dashboard-container">
-      <DashNavbar />
+      <DashNavbar handleToggleIcon={handleToggleIcon} />
+      {toggleIcon && (
+        <MobileMenu
+          toggleIcon={toggleIcon}
+          handleCloseToggleIcon={handleCloseToggleIcon}
+        />
+      )}
       <div className="sidebar-main-container">
         <DashSidebar />
         <MainSide />
       </div>
       <DashFooter />
+      <DashNavigator />
     </div>
   );
 };
