@@ -83,6 +83,19 @@
     display: initial;
     font-size: 20px;
   }
+  .search-procount-box {
+    position: relative;
+  }
+
+  .disp {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    font-size: 14px;
+    height: 35px;
+  }
 }
 @media only screen and (max-width: 400px) {
   .dash-btn {
