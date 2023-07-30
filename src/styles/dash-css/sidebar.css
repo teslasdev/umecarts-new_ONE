@@ -3,6 +3,9 @@
   background: #fff;
   box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.1);
   padding-top: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 .sidebar-box {
   margin: 0 auto;
@@ -20,11 +23,15 @@
   padding: 10px 20px 10px 5em;
   cursor: pointer;
 }
-.sidebar-item-box:hover {
+.active-link {
+  background: #ca0505;
+  color: #fff;
+}
+/* .sidebar-item-box:hover {
   background: #ca0505;
   color: #fff;
   width: 100%;
-}
+} */
 .logout-box {
   display: flex;
   align-items: center;

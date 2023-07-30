@@ -10,6 +10,8 @@ import DeliveryController from "./components/Page-controller/Delivery-controller
 import PaymentController from "./components/Page-controller/Payment-controller";
 import CompletionController from "./components/Page-controller/Completion-controller";
 import Dashboard from "./components/pages/dashboard";
+import DashProduct from "./components/pages/dashboard/product";
+import DashOrder from "./components/pages/dashboard/order";
 
 const App = () => {
   AOS.init();
@@ -66,6 +68,15 @@ const App = () => {
     {
       path: "/dashboard",
       element: <Dashboard />,
+    },
+    {
+      path: "/dashproduct",
+      element: <DashProduct />,
+    },
+    ,
+    {
+      path: "/dashorder",
+      element: <DashOrder />,
     },
   ]);
   return (

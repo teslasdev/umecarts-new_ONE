@@ -3,6 +3,9 @@
   padding: 10px 8rem;
   width: 100%;
   border-bottom: 1px solid #d5d8dc;
+  position: sticky;
+  top: 0;
+  z-index: 111;
 }
 .um-grov-logo {
   width: 60px;
