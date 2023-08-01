@@ -42,7 +42,7 @@ const DashSidebar = ({ toggleIcon }) => {
           <div className="sidebar-text">Orders</div>
         </NavLink>
         <NavLink
-          to="/message"
+          to="/dashmessage"
           exact
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
@@ -52,7 +52,7 @@ const DashSidebar = ({ toggleIcon }) => {
           <div className="sidebar-text">Message</div>
         </NavLink>
         <NavLink
-          to="/uploaded"
+          to="/dashuploaded"
           exact
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
@@ -62,7 +62,7 @@ const DashSidebar = ({ toggleIcon }) => {
           <div className="sidebar-text">Uploaded files</div>
         </NavLink>
         <NavLink
-          to="payment"
+          to="dashpayment"
           exact
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"

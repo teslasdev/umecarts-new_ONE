@@ -1,0 +1,80 @@
+.rgh {
+  justify-content: flex-end;
+}
+.message-card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.profile-name-message-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.profile-image img {
+  background: #d1d8e0;
+  border-radius: 50%;
+  width: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+.name-txt {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-secondary-blue);
+}
+.msg-txt {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-tertiary-blue);
+}
+.prod-txt {
+  font-size: 18px;
+  color: var(--dark-primary-blue);
+  font-weight: 800;
+}
+.status-time-box {
+  font-size: 14px;
+}
+.status-time-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.status {
+  color: #017e4d;
+}
+.time-text {
+  color: #94a3b8;
+}
+@media only screen and (max-width: 800px) {
+  .profile-name-message-box {
+    gap: 5px;
+  }
+  .name-txt {
+    font-size: 14px;
+  }
+  .msg-txt {
+    font-size: 13px;
+  }
+  .prod-txt {
+    font-size: 14px;
+  }
+  .status-time-box {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .name-txt {
+    font-size: 12px;
+  }
+  .msg-txt {
+    font-size: 11px;
+  }
+  .prod-txt {
+    font-size: 12px;
+  }
+  .status-time-box {
+    font-size: 10px;
+  }
+}

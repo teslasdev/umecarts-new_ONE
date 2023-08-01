@@ -12,6 +12,7 @@ import CompletionController from "./components/Page-controller/Completion-contro
 import Dashboard from "./components/pages/dashboard";
 import DashProduct from "./components/pages/dashboard/product";
 import DashOrder from "./components/pages/dashboard/order";
+import DashMessage from "./components/pages/dashboard/message";
 
 const App = () => {
   AOS.init();
@@ -73,10 +74,13 @@ const App = () => {
       path: "/dashproduct",
       element: <DashProduct />,
     },
-    ,
     {
       path: "/dashorder",
       element: <DashOrder />,
+    },
+    {
+      path: "/dashmessage",
+      element: <DashMessage />,
     },
   ]);
   return (
