@@ -170,6 +170,19 @@
 .send-btn {
   color: #ca0505;
 }
+.seller-sent-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.time-sent {
+  font-size: 10px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+.cus-pro {
+  margin-bottom: 15px;
+}
 @media only screen and (max-width: 800px) {
   .profile-name-message-box {
     gap: 5px;
