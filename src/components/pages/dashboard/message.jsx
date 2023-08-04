@@ -1,8 +1,8 @@
 import { useState } from "react";
 import DashLayout from "../../layout/DashLayout";
 import "../../../styles/dash-css/message.css";
-import { HiOutlineSearch } from "react-icons/hi";
-import MessageCard from "../../dashComponents/MessageCard";
+// import { HiOutlineSearch } from "react-icons/hi";
+// import MessageCard from "../../dashComponents/MessageCard";
 import DashChat from "./DashChat";
 
 const DashMessage = () => {
