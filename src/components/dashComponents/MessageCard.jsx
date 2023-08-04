@@ -1,8 +1,8 @@
 import shoe from "../../assets/products/product4.png";
 
-const MessageCard = () => {
+const MessageCard = ({ handleChatPage }) => {
   return (
-    <div className="message-card-container">
+    <div className="message-card-container" onClick={handleChatPage}>
       <div className="profile-name-message-box">
         <div className="profile-image">
           <img src={shoe} alt="" />

@@ -1,5 +1,6 @@
 import shoe from "../../../assets/products/product4.png";
 import { HiOutlineCamera } from "react-icons/hi";
+import { FaArrowLeft } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 
 // function autoResize() {
@@ -26,9 +27,10 @@ function autoResize() {
   }
 }
 
-const DashChat = () => {
+const DashChat = ({ handleCloseChatPage }) => {
   return (
     <div className="chat-dash-container">
+      <FaArrowLeft className="back-arrw" onClick={handleCloseChatPage} />
       <div className="name-act-box">
         <div className="customer-name">Tony Montana</div>
         <div className="act-tim">Active 2 days ago</div>

@@ -4,7 +4,14 @@
 .message-card-container {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
   width: 100%;
+}
+.back-arrw {
+  font-size: 20px;
+  color: #002c66;
+  margin-left: -10px;
+  cursor: pointer;
 }
 .profile-name-message-box {
   display: flex;
@@ -165,6 +172,7 @@
 }
 .chat-btn {
   font-size: 25px;
+  cursor: pointer;
 }
 
 .send-btn {
