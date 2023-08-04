@@ -52,7 +52,7 @@ const DashSidebar = ({ toggleIcon }) => {
           <div className="sidebar-text">Message</div>
         </NavLink>
         <NavLink
-          to="/dashuploaded"
+          to="/uploadfile"
           exact
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"

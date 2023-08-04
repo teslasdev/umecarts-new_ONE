@@ -13,6 +13,7 @@ import Dashboard from "./components/pages/dashboard";
 import DashProduct from "./components/pages/dashboard/product";
 import DashOrder from "./components/pages/dashboard/order";
 import DashMessage from "./components/pages/dashboard/message";
+import UploadFile from "./components/pages/dashboard/UploadFile";
 
 const App = () => {
   AOS.init();
@@ -81,6 +82,10 @@ const App = () => {
     {
       path: "/dashmessage",
       element: <DashMessage />,
+    },
+    {
+      path: "/uploadfile",
+      element: <UploadFile />,
     },
   ]);
   return (
