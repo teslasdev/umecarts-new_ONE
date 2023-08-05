@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import DashLayout from "../../layout/DashLayout";
+import UploadCard from "../../dashComponents/uploadCard";
 
 const UploadFile = () => {
   const [searchToggleIcon, setSearchToggleIcon] = useState(false);
@@ -13,9 +14,9 @@ const UploadFile = () => {
       <div className="product-dash-container">
         <div className="product-head-box">
           <div className="tit-body">
-            <div className="dashbor-text">Message</div>
+            <div className="dashbor-text">Uploaded files</div>
             <div className="dashbor-simple red">
-              Messages from buyers & potential buyers.
+              Manage your cloud storage for your uploaded files.
             </div>
           </div>
         </div>
@@ -31,9 +32,16 @@ const UploadFile = () => {
               onClick={handleSearchToggleIcon}
             />
           </div>
-          <div className="emppty-pro-boc">
-            <div className="dashbor-text">Your Message is Empty!</div>
-            <div className="pro-simple">You do not have any message yet.</div>
+          {/* <div className="emppty-pro-boc">
+            <div className="dashbor-text">Your Uploaded files is Empty!</div>
+            <div className="pro-simple">
+              You do not have any uploaded files yet.
+            </div>
+          </div> */}
+          <div className="nonempty-pro-container">
+            <UploadCard />
+            <UploadCard />
+            <UploadCard />
           </div>
         </div>
       </div>
