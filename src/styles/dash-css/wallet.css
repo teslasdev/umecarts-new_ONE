@@ -22,3 +22,57 @@
   background: #004399;
   color: #f0f7ff;
 }
+.trans-date {
+  color: #2e486b;
+  font-size: 14px;
+  font-weight: 800;
+}
+.transac-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.init-name {
+  width: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f0f7ff;
+}
+.init-name-head-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.credit {
+  color: #02bd73;
+}
+.debit {
+  color: #f52424;
+}
+.headline-time {
+  color: #2e486b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.head-line {
+  font-size: 14px;
+  font-weight: 700;
+}
+.alert-time {
+  font-size: 13px;
+}
+.amt-text {
+  font-size: 16px;
+  font-weight: 900;
+  color: #1f3047;
+}
+.nonempty-wallet-container {
+  margin-top: 15px;
+}

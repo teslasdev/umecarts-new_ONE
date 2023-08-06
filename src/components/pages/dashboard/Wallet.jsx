@@ -2,6 +2,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import DashLayout from "../../layout/DashLayout";
 import "../../../styles/dash-css/wallet.css";
 import { useState } from "react";
+import TransactionCard from "../../dashComponents/TransctionCard";
 const Wallet = () => {
   const [searchToggleIcon, setSearchToggleIcon] = useState(false);
   const handleSearchToggleIcon = () => {
@@ -50,13 +51,47 @@ const Wallet = () => {
               onClick={handleSearchToggleIcon}
             />
           </div>
-          <div className="emppty-pro-boc">
+          {/* <div className="emppty-pro-boc">
             <div className="dashbor-text">
               Your Transaction History is Empty!
             </div>
             <div className="pro-simple">
               You do not have any transaction history yet.
             </div>
+          </div> */}
+          <div className="nonempty-wallet-container">
+            <div className="trans-date">29th June, 2023</div>
+            <TransactionCard
+              credeb={"credit"}
+              init={"C"}
+              amount={"+50,000.00"}
+              head={"Payment for successful product purchase"}
+            />
+            <TransactionCard
+              credeb={"debit"}
+              init={"D"}
+              amount={"-20,000.00"}
+              head={"Refund request successful"}
+            />
+            <div className="trans-date">22nd June, 2023</div>
+            <TransactionCard
+              credeb={"credit"}
+              init={"C"}
+              amount={"+19,000.00"}
+              head={"Payment for successful product purchase"}
+            />
+            <TransactionCard
+              credeb={"debit"}
+              init={"D"}
+              amount={"-1,000.00"}
+              head={"Refund request successful"}
+            />
+            <TransactionCard
+              credeb={"debit"}
+              init={"D"}
+              amount={"-9,000.00"}
+              head={"Refund request successful"}
+            />
           </div>
         </div>
       </div>
