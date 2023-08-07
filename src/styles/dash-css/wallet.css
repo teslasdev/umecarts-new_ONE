@@ -76,3 +76,38 @@
 .nonempty-wallet-container {
   margin-top: 15px;
 }
+@media only screen and (max-width: 410px) {
+  .init-name {
+    width: 35px;
+    font-size: 16px;
+    height: 35px;
+  }
+  .head-line {
+    font-size: 12px;
+  }
+  .alert-time {
+    font-size: 11px;
+  }
+  .amt-text {
+    font-size: 14px;
+  }
+  .ind {
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .init-name {
+    width: 30px;
+    font-size: 14px;
+    height: 30px;
+  }
+  .head-line {
+    font-size: 10px;
+  }
+  .alert-time {
+    font-size: 9px;
+  }
+  .amt-text {
+    font-size: 12px;
+  }
+}

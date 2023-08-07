@@ -34,7 +34,9 @@ const Wallet = () => {
                 You can send a withdrawal request for your current balance.
               </div>
               <div className="btn-new with">
-                <button className="dash-btn">Send withdrawal request </button>
+                <button className="dash-btn ind">
+                  Send withdrawal request
+                </button>
               </div>
             </div>
           </div>
