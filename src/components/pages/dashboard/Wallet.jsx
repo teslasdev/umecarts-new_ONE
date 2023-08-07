@@ -3,8 +3,14 @@ import DashLayout from "../../layout/DashLayout";
 import "../../../styles/dash-css/wallet.css";
 import { useState } from "react";
 import TransactionCard from "../../dashComponents/TransctionCard";
+import transactions from "../../../utils/transaction.json";
 const Wallet = () => {
   const [searchToggleIcon, setSearchToggleIcon] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
   const handleSearchToggleIcon = () => {
     setSearchToggleIcon(!searchToggleIcon);
   };
@@ -37,9 +43,36 @@ const Wallet = () => {
           <div className="dashbor-text">Transaction History</div>
           <div className="search-procount-box">
             <div className="navig-wallet-cont ">
-              <div className="navig-each waal-act">All</div>
-              <div className="navig-each">Credit</div>
-              <div className="navig-each">Debit</div>
+              <div
+                className={
+                  selectedCategory === "All"
+                    ? "navig-each waal-act"
+                    : "navig-each"
+                }
+                onClick={() => handleCategorySelect("All")}
+              >
+                All
+              </div>
+              <div
+                className={
+                  selectedCategory === "credit"
+                    ? "navig-each waal-act"
+                    : "navig-each"
+                }
+                onClick={() => handleCategorySelect("credit")}
+              >
+                Credit
+              </div>
+              <div
+                className={
+                  selectedCategory === "debit"
+                    ? "navig-each waal-act"
+                    : "navig-each"
+                }
+                onClick={() => handleCategorySelect("debit")}
+              >
+                Debit
+              </div>
             </div>
             <input
               type="text"
@@ -61,37 +94,13 @@ const Wallet = () => {
           </div> */}
           <div className="nonempty-wallet-container">
             <div className="trans-date">29th June, 2023</div>
-            <TransactionCard
-              credeb={"credit"}
-              init={"C"}
-              amount={"+50,000.00"}
-              head={"Payment for successful product purchase"}
-            />
-            <TransactionCard
-              credeb={"debit"}
-              init={"D"}
-              amount={"-20,000.00"}
-              head={"Refund request successful"}
-            />
-            <div className="trans-date">22nd June, 2023</div>
-            <TransactionCard
-              credeb={"credit"}
-              init={"C"}
-              amount={"+19,000.00"}
-              head={"Payment for successful product purchase"}
-            />
-            <TransactionCard
-              credeb={"debit"}
-              init={"D"}
-              amount={"-1,000.00"}
-              head={"Refund request successful"}
-            />
-            <TransactionCard
-              credeb={"debit"}
-              init={"D"}
-              amount={"-9,000.00"}
-              head={"Refund request successful"}
-            />
+            {transactions.map(
+              (trans, index) =>
+                (selectedCategory === "All" ||
+                  trans.credeb === selectedCategory) && (
+                  <TransactionCard key={index} props={trans} />
+                )
+            )}
           </div>
         </div>
       </div>
