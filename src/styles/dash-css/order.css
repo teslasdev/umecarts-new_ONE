@@ -96,6 +96,10 @@
   color: #ca0505;
   background: #fef0f0;
 }
+.pend {
+  color: #eb8918;
+  background: #fef8f0;
+}
 .sel-opt {
   display: none;
 }

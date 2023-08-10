@@ -15,6 +15,7 @@ import DashOrder from "./components/pages/dashboard/order";
 import DashMessage from "./components/pages/dashboard/message";
 import UploadFile from "./components/pages/dashboard/UploadFile";
 import Wallet from "./components/pages/dashboard/Wallet";
+import Refund from "./components/pages/dashboard/Refund";
 
 const App = () => {
   AOS.init();
@@ -91,6 +92,10 @@ const App = () => {
     {
       path: "/wallet",
       element: <Wallet />,
+    },
+    {
+      path: "/refund",
+      element: <Refund />,
     },
   ]);
   return (
