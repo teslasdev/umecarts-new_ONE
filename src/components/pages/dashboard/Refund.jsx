@@ -19,14 +19,13 @@ const Refund = () => {
       <div className="product-dash-container">
         <div className="product-head-box">
           <div className="tit-body">
-            <div className="dashbor-text">Payment</div>
+            <div className="dashbor-text">Refund Request</div>
             <div className="dashbor-simple red">
-              Manage your transactions here
+              See the request that has been sent to you for refund.
             </div>
           </div>
         </div>
         <div className="pro-main-container">
-          <div className="dashbor-text">Transaction History</div>
           <div className="search-procount-box">
             <div className="navig-wallet-cont ">
               <div
