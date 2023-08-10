@@ -8,12 +8,23 @@ import { TiDocumentText } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import { MdPayment, MdOutlineSettings } from "react-icons/md";
 const DashSidebar = ({ toggleIcon }) => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can change this to "auto" for instant scroll
+    });
+  };
+  const handleNavLinkClick = () => {
+    console.log("NavLink clicked");
+    scrollToTop();
+  };
   return (
     <div className="dash-sidebar-container">
       <div className="sidebar-box">
         <NavLink
           to="/dashboard"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -24,6 +35,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="/dashproduct"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -34,6 +46,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="/dashorder"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -44,6 +57,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="/dashmessage"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -54,6 +68,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="/uploadfile"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -62,7 +77,8 @@ const DashSidebar = ({ toggleIcon }) => {
           <div className="sidebar-text">Uploaded files</div>
         </NavLink>
         <NavLink
-          to="wallet"
+          to="/wallet"
+          onClick={handleNavLinkClick}
           exact
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
@@ -74,6 +90,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="/refund"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -84,6 +101,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="support"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -94,6 +112,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="coupon"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
@@ -104,6 +123,7 @@ const DashSidebar = ({ toggleIcon }) => {
         <NavLink
           to="shop"
           exact
+          onClick={handleNavLinkClick}
           className={({ isActive }) =>
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
