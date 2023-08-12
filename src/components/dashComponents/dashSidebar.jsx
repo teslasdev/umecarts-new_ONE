@@ -99,7 +99,7 @@ const DashSidebar = ({ toggleIcon }) => {
           <div className="sidebar-text">Refund request</div>
         </NavLink>
         <NavLink
-          to="support"
+          to="/support"
           exact
           onClick={handleNavLinkClick}
           className={({ isActive }) =>
