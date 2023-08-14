@@ -17,6 +17,7 @@ import UploadFile from "./components/pages/dashboard/UploadFile";
 import Wallet from "./components/pages/dashboard/Wallet";
 import Refund from "./components/pages/dashboard/Refund";
 import Support from "./components/pages/dashboard/Support";
+import Coupon from "./components/pages/dashboard/Coupon";
 
 const App = () => {
   AOS.init();
@@ -101,6 +102,10 @@ const App = () => {
     {
       path: "/support",
       element: <Support />,
+    },
+    {
+      path: "/coupon",
+      element: <Coupon />,
     },
   ]);
   return (
