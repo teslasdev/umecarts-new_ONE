@@ -18,6 +18,7 @@ import Wallet from "./components/pages/dashboard/Wallet";
 import Refund from "./components/pages/dashboard/Refund";
 import Support from "./components/pages/dashboard/Support";
 import Coupon from "./components/pages/dashboard/Coupon";
+import ShopSetting from "./components/pages/dashboard/ShopSetting";
 
 const App = () => {
   AOS.init();
@@ -106,6 +107,10 @@ const App = () => {
     {
       path: "/coupon",
       element: <Coupon />,
+    },
+    {
+      path: "/shopsetting",
+      element: <ShopSetting />,
     },
   ]);
   return (
