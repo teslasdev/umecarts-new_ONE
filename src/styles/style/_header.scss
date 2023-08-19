@@ -8,7 +8,6 @@
         
         &-box {
             width: 100%;
-            @apply flex justify-between  sm:px-24 px-4 items-center;
             height: 93px;
             border-bottom: 1px solid #94A3B8;
             @include respond(phone) {
@@ -20,7 +19,6 @@
             border-bottom: 1px solid #94A3B8;
             height: 37px;
             background-color: var(--color-white);
-            @apply flex justify-between items-center px-24;
             width: 100%;
             font-size: 14px;
             font-weight: 600;
@@ -43,7 +41,7 @@
                 border: 1.5px solid #94A3B8;
                 border-radius: 8px 0px 0px 8px;
                 outline: none;
-                @apply pl-3;
+                padding-left: 0.75rem /* 12px */;
             }
 
             span {
@@ -52,7 +50,6 @@
                 background: #CA0505;
                 border: 1px solid #CA0505;
                 border-radius: 0px 8px 8px 0px;
-                @apply flex justify-center items-center text-2xl cursor-pointer;
                 color: var(--color-white);
 
             }
@@ -61,11 +58,10 @@
         &-options {
             display: flex;
             align-items: center;
-            @apply gap-2;
+            gap: 0.5rem/* 8px */;
         }
 
         &-button {
-            @apply flex items-center justify-center gap-2 font-bold sm:h-[50px] h-[34px];
             width: 100px;
             background: #CA0505;
             border-radius: 8px;
@@ -73,9 +69,10 @@
         }
 
         &-seller {
-            @apply text-sm font-bold;
             text-decoration: underline;
-            
+            font-size: 0.875rem/* 14px */;
+            line-height: 1.25rem/* 20px */;
+            font-weight: 700;
         }
 
        

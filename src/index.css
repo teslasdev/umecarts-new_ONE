@@ -141,13 +141,15 @@ body {
   background: #f0f7ff;
   border-radius: 24px;
   backface-visibility: hidden;
-  @apply flex justify-center items-center;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
 
 .select-field * {
   background-color: #fcfcfc;
   border: none;
-  @apply rounded-md;
+  border-radius: 0.375rem;
 }
 .input-form-search {
   padding: 0.6rem 1rem;

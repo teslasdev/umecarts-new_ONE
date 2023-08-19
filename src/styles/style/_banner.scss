@@ -17,11 +17,13 @@
             background-color: var(--primary-red);
         }
         &-product {
-            @apply mt-4 flex gap-2;
+            display: flex;
+            margin-top: 1rem;
+            gap: 8px;
             &_img {
                 width: 60px;
                 height: 60px;
-                @apply rounded-sm;
+                border-radius: 2px;
             }
 
             &-promo {
@@ -30,7 +32,11 @@
                 background: #FEF0F0;
                 color: var(--primary-red);
                 font-size: 8px;
-                @apply flex justify-center items-center p-4 rounded-md;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                padding: 1rem;
+                border-radius: 6px;
             }
             &-box {
                 border: 1px solid #F0F7FF;
@@ -38,7 +44,7 @@
                 margin-top: 20px;
                 cursor: pointer;
                 display: block;
-                @apply min-w-[130px]
+                min-width: 130px;
             }
         }
     }

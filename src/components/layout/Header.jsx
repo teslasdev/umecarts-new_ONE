@@ -41,7 +41,7 @@ const Header = () => {
         data-aos="fade-down"
       >
         {isTabletOrMobile && (
-          <div className="um-header-box flex">
+          <div className="um-header-box flex justify-between  sm:px-24 px-4 items-center">
             <img src={logo} className="um-header-logo" />
 
             {/* Search Box */}
@@ -52,7 +52,7 @@ const Header = () => {
                 className="um-header-input w-[300px]"
                 placeholder="I am searching for"
               />
-              <span>
+              <span className="flex justify-center items-center text-2xl cursor-pointer">
                 <AiOutlineSearch />
               </span>
             </div>
@@ -123,7 +123,7 @@ const Header = () => {
         )}
 
         {isPortrait && (
-          <div className="um-header-box flex">
+          <div className="um-header-box flex justify-between  sm:px-24 px-4 items-center">
             <div className="flex items-center gap-4">
               <HiBars3BottomLeft size={24} />
               <img src={logo} alt="" />
@@ -136,7 +136,7 @@ const Header = () => {
         )}
 
         {isTabletOrMobile && (
-          <div className="um-header-box1">
+          <div className="um-header-box1 flex justify-between items-center px-24">
             <Link to="/">Wrist watches</Link>
             <Link to="/">Female Fashion & Clothing</Link>
             <Link to="/">Electronic & Accessories</Link>

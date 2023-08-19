@@ -9,14 +9,14 @@ import logo from '../../assets/logo/Vector.png';
 const Footer = () => {
   return (
     <>
-      <div className="um-footer-pre flex flex-col sm:flex-row sm:justify-between sm:items-start items-center sm:px-24 px-0 py-12">
-        <div className="um-footer-form">
+      <div className="um-footer-pre sm:h-[306px] flex flex-col sm:flex-row sm:justify-between sm:items-start items-center sm:px-24 px-0 py-12">
+        <div className="um-footer-form m-6 sm:text-start text-center">
           <img src={logo} alt="" className='m-auto sm:m-0'/>
 
           <h5 className='text-white font-semibold my-6'>The Largest Localize B2C Online Marketplace </h5>
          
           <div className="um-footer-pre-search">
-            <input type="text" className='um-footer-pre-input' placeholder='Your Email Address'/>
+            <input type="text" className='um-footer-pre-input pl-3 sm:w-[287px] w-[90%]' placeholder='Your Email Address'/>
             <span>
               search
             </span>

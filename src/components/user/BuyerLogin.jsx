@@ -14,8 +14,8 @@ const Buyer = () => {
   return (
     <div className='um-sign-bg'>
       <Badge text="Login"/>
-      <div className="um-sign-box">
-        <form action="" className='um-sign-form'>
+      <div className="um-sign-box h-full w-full py-12 sm:px-0 px-3 flex justify-center items-center">
+        <form action="" className='um-sign-form sm:p-8 p-4 bg-white'>
           <div className="um-sign-fields ">
             <h4 className='sm:text-3xl text-xl font-extrabold m-6 sm:mb-12 mb-4 text-center'>Log in to your Account</h4>
             {/* Inputs */}

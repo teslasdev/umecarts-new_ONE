@@ -77,11 +77,11 @@ const data = [
 const Category1 = () => {
   return (
     <>
-        <div className='um-product-caret flex w-full gap-6 sm:overflow-hidden overflow-x-scroll'>
+        <div className='um-product-caret flex py-2 sm:px-6 px-1 w-full gap-6 sm:overflow-hidden overflow-x-scroll'>
             {data.map((item) => {
                 return (
-                    <div className="um-category" key={data.id}>
-                        <div className="um-category-img" style={{background : `${item.color}`}}>
+                    <div className="um-category sm:py-0 py-6 gap-3" key={data.id}>
+                        <div className="um-category-img sm:w-[183px] sm:h-[183px] w-[70px] h-[70px]" style={{background : `${item.color}`}}>
                             <img src={item.image} alt="" className='sm:w-full w-[40px]'/>
                         </div>
 

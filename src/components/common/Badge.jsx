@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { BsCheck2Circle } from 'react-icons/bs';
 export const Badge = (props) => {
   return (
-    <div className='um-sign-badge'>
+    <div className='um-sign-badge items-center text-sm gap-2 sm:px-24 px-4'>
         <BiHome />
         <Link to="/">Home</Link>
         <RxCaretRight />

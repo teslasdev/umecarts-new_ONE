@@ -9,7 +9,7 @@ const Feature = () => {
   return (
     <>
         <div className='um-product rounded-sm shadow-md'>
-            <div className='um-product-header flex justify-between px-2 py-4 w-full items-center rounded-t-md bg-red-600'>
+            <div className='um-product-header flex h-[30%] sm:text-xl text-[16px] justify-between px-2 py-4 w-full items-center rounded-t-md bg-red-600'>
                 <div>
                     <p className='font-bold sm:text-xl text-sm text-white'>Flash Sales</p>
                 </div>
@@ -21,7 +21,7 @@ const Feature = () => {
                     </>}
                 </div>
 
-                <div className='relative um-header-button cursor-pointer bg-white'>
+                <div className='relative um-header-button flex items-center justify-center gap-2 font-bold sm:h-[50px] h-[34px] cursor-pointer bg-white'>
                     <span>
                         View
                     </span>
@@ -31,7 +31,7 @@ const Feature = () => {
                 </div>
             </div>
 
-            <div className='um-product-caret  flex w-full  gap-6 sm:overflow-hidden overflow-x-scroll'>
+            <div className='um-product-caret  flex py-2 sm:px-6 px-1 w-full  gap-6 sm:overflow-hidden overflow-x-scroll'>
                <React.Fragment>
                     <div className='um-product-box shadow-sm hover:shadow-md rounded-sm'>
                          <div className="um-product-img h-[60%] relative">
@@ -125,7 +125,7 @@ const Feature = () => {
                 </React.Fragment>
             </div>
 
-            <div className='um-product-caret  flex w-full  gap-6 sm:overflow-hidden  overflow-x-scroll'>
+            <div className='um-product-caret  flex py-2 sm:px-6 px-1 w-full  gap-6 sm:overflow-hidden  overflow-x-scroll'>
                <React.Fragment>
                     <div className='um-product-box shadow-sm hover:shadow-md rounded-sm'>
                          <div className="um-product-img h-[60%] relative">
@@ -219,7 +219,7 @@ const Feature = () => {
                 </React.Fragment>
             </div>
 
-            <div className='um-product-caret  flex w-full  gap-6 sm:overflow-hidden overflow-x-scroll'>
+            <div className='um-product-caret flex py-2 sm:px-6 px-1 w-full  gap-6 sm:overflow-hidden overflow-x-scroll'>
                <React.Fragment>
                     <div className='um-product-box shadow-sm hover:shadow-md rounded-sm'>
                          <div className="um-product-img h-[60%] relative">

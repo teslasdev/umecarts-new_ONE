@@ -13,8 +13,8 @@ const Buyer = () => {
   return (
     <div className='um-sign-bg'>
       <Badge text="Create Account"/>
-      <div className="um-sign-box">
-        <form action="" className='um-sign-form'>
+      <div className="um-sign-box h-full w-full py-12 sm:px-0 px-3 flex justify-center items-center">
+        <form action="" className='um-sign-form sm:p-8 p-4 bg-white'>
           <div className="um-sign-fields ">
             <h4 className='text-3xl font-extrabold m-6 mb-12 text-center'>Create a New Account</h4>
             {/* Inputs */}

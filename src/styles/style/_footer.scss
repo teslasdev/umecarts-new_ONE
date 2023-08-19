@@ -5,7 +5,10 @@
     &-social {
         width: 30px;
         height: 30px;
-        @apply flex items-center justify-center rounded-full;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9999px;
     }
 
     &-facebook {
@@ -31,8 +34,7 @@
         background: #F2F2F2;
     }
 
-    &-pre {
-        @apply sm:h-[306px];  
+    &-pre { 
         background-color: #1F3047;
         width: 100%;
         &-search {
@@ -47,7 +49,6 @@
                 border: 1.5px solid #94A3B8;
                 border-radius: 8px 0px 0px 8px;
                 outline: none;
-                @apply pl-3 sm:w-[287px] w-[90%];
             }
 
             span {
@@ -56,18 +57,17 @@
                 background: #CA0505;
                 border: 1px solid #CA0505;
                 border-radius: 0px 8px 8px 0px;
-                @apply flex justify-center items-center capitalize cursor-pointer;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                text-transform: capitalize;
+                cursor: pointer;
                 @layer text-md;
                 color: var(--color-white);
-
             }
            
         }
        
-    }
-    &-form {
-        @apply m-6 sm:text-start text-center;
-    
     }
     &-information {
         font-size: 18px;
@@ -76,7 +76,6 @@
         padding: 8px 16px 12px;
         p {
             font-size: 12px;
-            @apply pt-1 font-semibold;
         }
     }
 }

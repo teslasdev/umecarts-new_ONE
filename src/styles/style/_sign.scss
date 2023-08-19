@@ -1,6 +1,4 @@
 .um-sign {
-
-
     &-bg {
         background: #F0F7FF;
         min-height: 100vh;
@@ -8,30 +6,26 @@
 
     &-badge {
         display: flex;
-        @apply items-center text-sm gap-2;
         height: 50px;
-        @apply sm:px-24 px-4;
     }
-
-    &-box {
-        @apply h-full w-full py-12 sm:px-0 px-3 flex justify-center items-center;
-    }
-
     &-form {
-        @apply sm:p-8 p-4 bg-white;
         width: 610px;
         border-radius: 8px;
     }
 
     &-field {
         height: 52px;
-        @apply pl-4;
+        padding-left: 1rem/* 16px */;
         border: 1.5px solid #94A3B8;
         border-radius: 8px;
         outline: none;
 
         &-dropdown {
-            @apply flex justify-between items-center pr-1 pl-4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 0.25rem/* 4px */;
+            padding-left: 1rem/* 16px */;
             height: 52px;
             border: 1.5px solid #94A3B8;
             border-radius: 8px;
@@ -55,7 +49,8 @@
         display: inline-block;
         border-radius: 2px;
         display: flex;
-        @apply items-center justify-center;
+        justify-content: center;
+        align-items: center;
         background: var(--primary-red);
         color: var(--color-white);
         font-size: 12px;

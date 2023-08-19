@@ -1,9 +1,7 @@
 .um-product {
-    @apply my-6;
+    margin-top: 1.5rem/* 24px */;
+    margin-bottom: 1.5rem/* 24px */;
     background: #fff;
-    &-header {
-        @apply h-[30%] sm:text-xl text-[16px];
-    }
 
     &-box {
         border: 1px solid #F0F7FF;
@@ -11,7 +9,7 @@
         margin-top: 20px;
         cursor: pointer;
         display: block;
-        @apply min-w-[185px]
+        min-width: 185px;
     }
 
     &-badge {
@@ -21,16 +19,16 @@
         background-color: var(--light-red);
         font-size: 10px;
         color: var(--primary-red);
-        @apply flex items-center justify-center font-bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
     }
 
     &-range {
         background-color: var(--tertiary-red);
         height: 10px;
-        @apply rounded-full;
-    }
-    &-caret {
-        @apply py-2 sm:px-6 px-1;
+        border-radius: 9999px;
     }
     &-caret::-webkit-scrollbar {
         height: 0px;
@@ -42,16 +40,26 @@
         background: #F0F7FF;
         border-radius: 24px;
         cursor: pointer;
-        @apply flex justify-center items-center
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 .um-category {
-    @apply flex flex-col items-center sm:py-0 py-6 gap-3 flex-wrap;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     &-img {
         width: 183px;
         height: 183px;
-        @apply flex flex-col items-center justify-center rounded-full sm:w-[183px] sm:h-[183px] w-[70px] h-[70px];
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 9999px;
     }
 }
 
@@ -63,7 +71,7 @@
         height: 15px;
         border-radius: 4px;
         position: relative;
-        @apply flex;
+        display: flex;
 
         &-clicked::after {
             content: "";
@@ -85,7 +93,7 @@
         height: 15px;
         border-radius: 50px;
         position: relative;
-        @apply flex;
+        display: flex;
 
         &-clicked::after {
             content: "";
@@ -112,7 +120,9 @@
         background: #F0F7FF;
         border-radius: 24px;
         cursor: pointer;
-        @apply flex justify-center items-center
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
