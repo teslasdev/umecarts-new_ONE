@@ -12,6 +12,13 @@ import CompletionController from "./components/Page-controller/Completion-contro
 import Dashboard from "./components/pages/dashboard";
 import DashProduct from "./components/pages/dashboard/product";
 import DashOrder from "./components/pages/dashboard/order";
+import DashMessage from "./components/pages/dashboard/message";
+import UploadFile from "./components/pages/dashboard/UploadFile";
+import Wallet from "./components/pages/dashboard/Wallet";
+import Refund from "./components/pages/dashboard/Refund";
+import Support from "./components/pages/dashboard/Support";
+import Coupon from "./components/pages/dashboard/Coupon";
+import ShopSetting from "./components/pages/dashboard/ShopSetting";
 
 const App = () => {
   AOS.init();
@@ -73,10 +80,37 @@ const App = () => {
       path: "/dashproduct",
       element: <DashProduct />,
     },
-    ,
     {
       path: "/dashorder",
       element: <DashOrder />,
+    },
+    {
+      path: "/dashmessage",
+      element: <DashMessage />,
+    },
+    {
+      path: "/uploadfile",
+      element: <UploadFile />,
+    },
+    {
+      path: "/wallet",
+      element: <Wallet />,
+    },
+    {
+      path: "/refund",
+      element: <Refund />,
+    },
+    {
+      path: "/support",
+      element: <Support />,
+    },
+    {
+      path: "/coupon",
+      element: <Coupon />,
+    },
+    {
+      path: "/shopsetting",
+      element: <ShopSetting />,
     },
   ]);
   return (

@@ -77,12 +77,6 @@ const DashOrder = () => {
             </div>
           </div>
           <div className="search-procount-box end">
-            {/* <select className="sel-opt">
-              <option value="Completed">New</option>
-              <option value="Completed">Pending</option>
-              <option value="Completed">Completed</option>
-              <option value="Cancelled">Cancelled</option>
-            </select> */}
             <div className="sel-opt" onClick={handleToggleOption}>
               <div className="opt-txt">
                 {selectedOrderProgress === "new" && <span>New</span>}
@@ -110,7 +104,7 @@ const DashOrder = () => {
             <input
               type="text"
               className={searchToggleIcon ? "search-inp disp" : "search-inp"}
-              placeholder="Search for a product..."
+              placeholder="Search keyword or order code..."
             />
             <HiOutlineSearch
               className="search-icon"

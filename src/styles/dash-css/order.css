@@ -96,9 +96,17 @@
   color: #ca0505;
   background: #fef0f0;
 }
+.pend {
+  color: #eb8918;
+  background: #fef8f0;
+}
 .sel-opt {
   display: none;
 }
+.chwid {
+  width: 400px;
+}
+
 @media only screen and (max-width: 800px) {
   .navigator-items-box {
     display: none;
@@ -150,6 +158,9 @@
   .order-card-container {
     justify-content: flex-start;
   }
+  .chwid {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width: 530px) {
@@ -161,5 +172,46 @@
     font-size: 15px;
     width: 95%;
     margin: 10px auto;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .chwid {
+    width: 250px;
+  }
+  .chsd {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .alid {
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .chwid {
+    width: 200px;
+  }
+  .chsd {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .alid {
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+@media only screen and (max-width: 355px) {
+  .chwid {
+    width: 250px;
+  }
+  .chsd {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .alid {
+    flex-wrap: nowrap;
+  }
+  #supp {
+    margin-top: -80px;
+    margin-left: 5em;
   }
 }
