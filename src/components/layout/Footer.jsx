@@ -58,7 +58,7 @@ const Footer = () => {
           <p>© umecarts (maxeps group)</p>
         </div>
 
-        <div className='um-footer-box flex gap-2'>
+        <div className='um-footer-box flex justify-center gap-2'>
           <div className='um-footer-social um-footer-facebook'>
             <Link to="" className='text-white'>
               <FaFacebookF />
