@@ -48,6 +48,8 @@
 body {
   font-family: "Mulish" !important;
   background: #f0f7ff;
+  color: #1F3047;
+  height: 100vh;
 }
 
 .border-gray-1 {

@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {BsInstagram} from 'react-icons/bs'
+import { useMediaQuery } from "react-responsive";
 import {AiOutlineTwitter,AiFillYoutube} from 'react-icons/ai'
 import {FaLinkedinIn,FaFacebookF} from 'react-icons/fa'
 import paymentCard from '../../assets/image/payment.png'
 import logo from '../../assets/logo/Vector.png';
 
 const Footer = () => {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   return (
     <>
+      {!isPortrait && (
       <div className="um-footer-pre sm:h-[306px] flex flex-col sm:flex-row sm:justify-between sm:items-start items-center sm:px-24 px-0 py-12">
         <div className="um-footer-form m-6 sm:text-start text-center">
           <img src={logo} alt="" className='m-auto sm:m-0'/>
@@ -53,39 +56,40 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='um-footer flex md:flex-row flex-col gap-4 md:gap-0  items-center sm:justify-between sm:px-24 px-4 sm:py-2 py-12 mb-8 sm:mb-0 justify-center text-white'>
+      )}
+      <div className='um-footer flex md:flex-row flex-col gap-4 md:gap-0 h-full items-center sm:justify-between sm:px-24 px-4 sm:py-2 py-12 mb-8 sm:mb-0 justify-center text-white'>
         <div>
           <p>© umecarts (maxeps group)</p>
         </div>
 
         <div className='um-footer-box flex justify-center gap-2'>
-          <div className='um-footer-social um-footer-facebook'>
+          <div className='um-footer-social um-footer-facebook rounded-full'>
             <Link to="" className='text-white'>
               <FaFacebookF />
             </Link>
           </div>
 
 
-          <div className='um-footer-social um-footer-twitter'>
+          <div className='um-footer-social um-footer-twitter rounded-full'>
             <Link to="" className='text-white'>
               <AiOutlineTwitter />
             </Link>
           </div>
 
 
-          <div className='um-footer-social um-footer-instagram'>
+          <div className='um-footer-social um-footer-instagram rounded-full'>
             <Link to="" className='text-white'>
               <BsInstagram />
             </Link>
           </div>
 
-          <div className='um-footer-social um-footer-youtube'>
+          <div className='um-footer-social um-footer-youtube rounded-full'>
             <Link to="" className='text-white'>
               <AiFillYoutube />
             </Link>
           </div>
 
-          <div className='um-footer-social um-footer-linkedin'>
+          <div className='um-footer-social um-footer-linkedin rounded-full'>
             <Link to="" className='text-white'>
               <FaLinkedinIn />
             </Link>

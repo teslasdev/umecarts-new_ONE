@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge } from '../common/Badge'
 import {BiErrorCircle} from 'react-icons/bi'
-import Button from '../common/Button'
+import {Button} from '../common/Button'
 
 const ForgotPassword = () => {
 

@@ -4,7 +4,7 @@ import {BiErrorCircle} from 'react-icons/bi'
 import {AiOutlineEye,AiOutlineEyeInvisible} from 'react-icons/ai'
 import {MdCheckBox,MdCheckBoxOutlineBlank} from 'react-icons/md'
 import { Link } from 'react-router-dom'
-import Button from '../common/Button'
+import {Button} from '../common/Button'
 import Social from '../common/Social'
 
 const Seller = () => {
@@ -38,13 +38,13 @@ const Seller = () => {
             </div>
 
 
-            <div className='relative w-full flex flex-col  py-4'>
+            <div className='relative z-10 w-full flex flex-col  py-4'>
               <span className='um-sign-icon'  onClick={() => setToggle(!toggle)} >{toggle ? <AiOutlineEye/> : <AiOutlineEyeInvisible/>}</span>
               <input type={toggle ? 'password' : 'text'} placeholder='Password' className='um-sign-field'/>
               <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
             </div>
 
-            <div className='relative w-full flex flex-col  py-4'>
+            <div className='relative z-10 w-full flex flex-col  py-4'>
               <span className='um-sign-icon'  onClick={() => setToggle(!toggle)} >{toggle ? <AiOutlineEye/> : <AiOutlineEyeInvisible/>}</span>
               <input type={toggle ? 'password' : 'text'} placeholder='Confirm Password' className='um-sign-field'/>
               <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
@@ -54,7 +54,7 @@ const Seller = () => {
                 <p className='font-bold py-6'>Business Information</p>
             </div>
 
-            <div className='relative w-full flex flex-col  py-4'>
+            <div className='relative z-10 w-full flex flex-col  py-4'>
               <div className='flex items-center gap-2'>
                 <input type='text' placeholder='Shop Name' className='um-sign-field w-4/5'/>
                 <p>.umecarts.com</p>

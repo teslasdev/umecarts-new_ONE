@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Button = (props) => {
+export const Button = (props) => {
   return (
     <div>
       {props.auth === 'button' ?
@@ -13,4 +13,21 @@ const Button = (props) => {
   )
 }
 
-export default Button
+
+export const PrimaryButton = ({
+  classNameButton,
+  type,
+  link,
+  name,
+  click
+}) => {
+  return (
+    <div>
+      {type ?
+        <button onClick={click} className={`${classNameButton}`}>{name}</button>
+        :
+        <Link className={`${classNameButton}`} to={link}>{name}</Link>
+      }
+    </div>
+  )
+}

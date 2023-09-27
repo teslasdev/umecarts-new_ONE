@@ -42,7 +42,7 @@ const App = () => {
     },
     {
       path: "/auth/seller",
-      element: <Auth auth="seller" />,
+      element: <Auth auth="seller" />
     },
     {
       path: "/forgotPassword",

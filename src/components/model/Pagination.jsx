@@ -14,7 +14,7 @@ const PaginationComponent = ({ currentPage, totalPages, handlePageChange }) => {
         disabled={currentPage === 1}
         className={`pre-next-btn ${currentPage === 1 ? "disabled" : ""}`}
       >
-        <FaChevronLeft />
+      <FaChevronLeft />
       </button>
       {pageNumbers.map((pageNumber) => (
         <button
