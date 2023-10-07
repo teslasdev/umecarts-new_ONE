@@ -1,13 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Button = (props) => {
+export const Button = ({
+  auth,
+  className,
+  name,
+  link,
+  isLoading,
+  disabled,
+  onClick,
+  type
+}) => {
   return (
     <div>
-      {props.auth === 'button' ?
-        <button className={props.type}>{props.name}</button>
+      {auth === 'button' ?
+        <button type={type} onClick={onClick} className={className} disabled={disabled}>{isLoading ? 'Loading....' : name}</button>
         :
-        <Link className={props.type} to={props.link}>{props.name}</Link>
+        <Link className={className} to={link}>{name}</Link>
       }
     </div>
   )

@@ -11,8 +11,7 @@ const Footer = () => {
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   return (
     <>
-      {!isPortrait && (
-      <div className="um-footer-pre sm:h-[306px] flex flex-col sm:flex-row sm:justify-between sm:items-start items-center sm:px-24 px-0 py-12">
+      <div className="um-footer-pre sm:h-[306px] md:flex hidden flex-col sm:flex-row sm:justify-between sm:items-start items-center sm:px-6 px-0 py-12">
         <div className="um-footer-form m-6 sm:text-start text-center">
           <img src={logo} alt="" className='m-auto sm:m-0'/>
 
@@ -21,7 +20,7 @@ const Footer = () => {
           <div className="um-footer-pre-search">
             <input type="text" className='um-footer-pre-input pl-3 sm:w-[287px] w-[90%]' placeholder='Your Email Address'/>
             <span>
-              search
+              Search
             </span>
           </div>
         </div>
@@ -56,7 +55,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      )}
       <div className='um-footer flex md:flex-row flex-col gap-4 md:gap-0 h-full items-center sm:justify-between sm:px-24 px-4 sm:py-2 py-12 mb-8 sm:mb-0 justify-center text-white'>
         <div>
           <p>© umecarts (maxeps group)</p>

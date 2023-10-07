@@ -16,8 +16,9 @@
     &-field {
         height: 52px;
         padding-left: 1rem/* 16px */;
-        border: 1.5px solid #94A3B8;
         border-radius: 8px;
+        border-width: 1.5;
+        border-style: solid;
         outline: none;
 
         &-dropdown {
@@ -42,7 +43,7 @@
 
     &-icon {
         position: absolute;
-        top: 40%;
+        top: 50%;
         right: 3%;
         transform: translateY(-50%);
         cursor: pointer;

@@ -8,7 +8,7 @@ const Auth = (props) => {
     return (
         <>
             <Layout>
-                {props.auth === 'buyer' ? <BuyerLogin/> : <SellerLogin/>}
+                {props.auth && <BuyerLogin/> }
                 {props.auth === 'forget' ? <ForgotPassword /> : ''}
             </Layout>
         </>

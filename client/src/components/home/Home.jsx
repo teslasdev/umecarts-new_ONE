@@ -15,7 +15,7 @@ const Home = () => {
     <div>
         <>
             <Layout>
-              <div className='sm:px-32 px-2 py-8'>
+              <div className='lg:px-32 sm:px-12 px-2 py-8'>
                 <Banner />
                 <Banner2 />
                 <Feature />

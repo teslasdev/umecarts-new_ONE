@@ -13,7 +13,7 @@ import { setGlobalState } from "../common/store";
 
 
 const Header = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 900px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(min-width: 500px)" });
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   const [toggleOption, setToggleOption] = useState(false);
 
@@ -42,13 +42,13 @@ const Header = () => {
         data-aos="fade-down"
       >
         {isTabletOrMobile && (
-          <div className="um-header-box flex justify-between sm:px-24 px-4 items-center">
+          <div className="um-header-box sm:flex hidden justify-between sm:px-6 md:px-12 lg:px-24 px-4 items-center">
             <img src={logo} className="um-header-logo" />
             {/* Search Box */}
-            <div className="um-header-search">
+            <div className="um-header-search lg:flex hidden">
               <input
                 type="text"
-                className="um-header-input h-[70px] bg-red-400 w-[350px]"
+                className="um-header-input h-[70px] bg-red-400 w-[250px] lg:w-[350px]"
                 placeholder="I am searching for"
               />
               <span className="flex justify-center items-center text-2xl cursor-pointer">
@@ -103,10 +103,10 @@ const Header = () => {
                 {toggleOption && (
                   <div className='absolute flex flex-col text-[#1F3047] gap-1 top-14  um-header-dropdown bg-white shadow-md'>
                     <span className='flex gap-2 p-2 px-4 items-center font-bold hover:bg-red-600 hover:text-white'>
-                        <Link to="/user/login">Login</Link>
+                        <Link to="/auth/login">Login</Link>
                     </span>
                     <span className='flex gap-2 p-2 px-4 text-[#1F3047] items-center font-bold hover:bg-red-600 hover:text-white'>
-                        <Link to="/auth/buyer">Register</Link>
+                        <Link to="/user/buyer">Register</Link>
                     </span>
                   </div>
                 )}
@@ -131,7 +131,7 @@ const Header = () => {
         )}
 
         {isTabletOrMobile && (
-          <div className="um-header-box1 flex justify-between items-center px-24">
+          <div className="um-header-box1 lg:flex hidden justify-between items-center px-24">
             <Link to="/">Wrist watches</Link>
             <Link to="/">Female Fashion & Clothing</Link>
             <Link to="/">Electronic & Accessories</Link>

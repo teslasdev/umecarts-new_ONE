@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <>
         <div className='flex flex-col sm:flex-row gap-2 justify-center'>
-            <div className='um-main-banner sm:w-[77%] w-full'>
+            <div className='um-main-banner sm:w-[50%] md:w-[60%] lg:w-[77%] w-full'>
                 <div className="um-main-img">
                     <img src={banner} alt="" srcset="" className='w-full' />
                 </div>
@@ -23,7 +23,7 @@ const Banner = () => {
             </div>
             {isPortrait && <Category1 /> }
 
-            <div className='um-top-deal sm:w-[23%] w-full p-2'>
+            <div className='um-top-deal md:w-[40%] lg:w-[23%] w-full p-2'>
                 <div className="um-top-header text-sm font-bold text-white flex justify-between">
                     <p>Top Deals for Today</p>
                     <Link to="">View all</Link>

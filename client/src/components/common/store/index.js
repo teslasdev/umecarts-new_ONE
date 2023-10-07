@@ -1,7 +1,8 @@
 import { createGlobalState } from 'react-hooks-global-state'
 
 const { getGlobalState, useGlobalState, setGlobalState } = createGlobalState({
-  sideBar : false
+  sideBar : false,
+  Auth : 'Buyer'
 })
 
 
