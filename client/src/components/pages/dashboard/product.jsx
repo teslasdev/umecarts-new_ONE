@@ -7,7 +7,9 @@ import products from "../../../utils/product.json";
 import isEmpty from "../../../utils/isEmpty";
 import DashLayout from "../../layout/DashLayout";
 import PaginationComponent from "../../model/Pagination";
+import { useNavigate } from "react-router";
 const DashProduct = () => {
+  const navigate =useNavigate()
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
   const [searchToggleIcon, setSearchToggleIcon] = useState(false);
@@ -25,6 +27,10 @@ const DashProduct = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top when page changes
   }, [currentPage]);
+
+  const handleNavigate = () => {
+    navigate('/seller/product/add')
+  }
   return (
     <DashLayout>
       <div className="product-dash-container">
@@ -34,7 +40,7 @@ const DashProduct = () => {
             <div className="dashbor-simple red">Manage or add new Products</div>
           </div>
           <div className="btn-new">
-            <button className="dash-btn">Add new product</button>
+            <button className="dash-btn" onClick={handleNavigate}>Add new product</button>
           </div>
         </div>
         <div className="pro-main-container">

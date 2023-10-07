@@ -13,7 +13,7 @@ const ToggleSwitch = () => {
         <input type="checkbox" checked={isToggled} onChange={handleToggle} />
         <span className="slider"></span>
       </label>
-      <p>{isToggled ? "On" : "Off"}</p>
+      {/* <p>{isToggled ? "On" : "Off"}</p> */}
     </div>
   );
 };

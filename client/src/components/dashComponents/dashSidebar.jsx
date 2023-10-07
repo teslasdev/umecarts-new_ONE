@@ -33,7 +33,7 @@ const DashSidebar = ({ toggleIcon }) => {
           <div className="sidebar-text">Dashboard</div>
         </NavLink>
         <NavLink
-          to="/dashproduct"
+          to="/seller/products"
           exact
           onClick={handleNavLinkClick}
           className={({ isActive }) =>

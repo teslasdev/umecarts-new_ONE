@@ -19,6 +19,8 @@ import Refund from "./components/pages/dashboard/Refund";
 import Support from "./components/pages/dashboard/Support";
 import Coupon from "./components/pages/dashboard/Coupon";
 import ShopSetting from "./components/pages/dashboard/ShopSetting";
+import AddProduct from "./components/pages/dashboard/product/addProduct";
+
 
 const App = () => {
   AOS.init();
@@ -77,8 +79,12 @@ const App = () => {
       element: <Dashboard />,
     },
     {
-      path: "/dashproduct",
+      path: "/seller/products",
       element: <DashProduct />,
+    },
+    {
+      path: "/seller/product/add",
+      element: <AddProduct />,
     },
     {
       path: "/dashorder",

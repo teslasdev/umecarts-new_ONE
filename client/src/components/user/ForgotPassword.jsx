@@ -17,14 +17,8 @@ const ForgotPassword = () => {
             <div className='w-full flex flex-col py-4'>
               <input type="email" placeholder='Email Address' className='um-sign-field'/>
               <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
-            </div>
-
-        
-            <Button type="um-btn um-btn-filled" name="Send OTP" auth="button"/>
-
-
-
-            
+            </div>        
+            <Button type="um-btn um-btn-filled" name="Send OTP" auth="button"/>            
           </div>
         </form>
       </div>
