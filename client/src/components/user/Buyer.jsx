@@ -29,7 +29,7 @@ const Buyer = () => {
                 type="text" 
                 name="firstname"
                 placeholder='First Name' 
-                c className={`um-sign-field ${formik.errors.firstname ?  "border-[1.88px] border-red-400" : 'border-[1.5px] border-[#94A3B8]'}`}
+                className={`um-sign-field ${formik.errors.firstname ?  "border-[1.88px] border-red-400" : 'border-[1.5px] border-[#94A3B8]'}`}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               />
@@ -53,7 +53,7 @@ const Buyer = () => {
                 type="email" 
                 name="email"
                 placeholder='Email Address' 
-                c className={`um-sign-field ${formik.errors.email ?  "border-[1.8px] border-red-400" : 'border-[1.5px] border-[#94A3B8]'}`}
+                className={`um-sign-field ${formik.errors.email ?  "border-[1.8px] border-red-400" : 'border-[1.5px] border-[#94A3B8]'}`}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               />

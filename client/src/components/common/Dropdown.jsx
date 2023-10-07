@@ -17,7 +17,7 @@ export const DropdownDefault = ({
       <div className='relative w-[100%]'>
           <div className={`${className}`}>
             <label className='font-bold'>{label}</label>
-            <div type={type} className='um-sign-field bg-white w-full cursor-pointer flex items-center' onClick={() => setOpen(!isOpen)}>
+            <div type={type} className='um-sign-field bg-white border-[1.5px] border-[#94A3B8] w-full cursor-pointer flex items-center' onClick={() => setOpen(!isOpen)}>
               <input type="hidden" className="bg-transparent cursor-pointer"  placeholder={placeholder} disabled={disabled} onClick={() => setOpen(!isOpen)} />
               <p className="text-[#777777]">{placeholder}</p>
             </div>

@@ -8,6 +8,7 @@ import {Button} from '../common/Button'
 import Social from '../common/Social'
 import { useRegisterSeller } from '../../helper/api-hooks/useAuth'
 import { setGlobalState, useGlobalState } from '../common/store'
+import { BiErrorCircle } from 'react-icons/bi'
 
 const Seller = () => {
   const [checkbox,setCheckbox] = useState(false)

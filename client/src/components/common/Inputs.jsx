@@ -28,7 +28,7 @@ export const PrimaryInput = ({
    return (
       <div className={`${className}`}>
          <label className='font-bold'>{label}</label>
-         <input type={type} placeholder={placeholder} className='um-sign-field bg-white' disabled={disabled}/>
+         <input type={type} placeholder={placeholder} className='um-sign-field bg-white border-[1.5px] border-[#94A3B8]' disabled={disabled}/>
       </div>
    )
 }

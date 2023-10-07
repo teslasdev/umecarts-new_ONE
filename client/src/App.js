@@ -71,7 +71,7 @@ const App = () => {
       element: <CompletionController />,
     },
     {
-      path: "/dashboard",
+      path: "/seller/dashboard",
       element: <Dashboard />,
     },
     {

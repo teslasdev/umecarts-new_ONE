@@ -22,7 +22,7 @@ const DashSidebar = ({ toggleIcon }) => {
     <div className="dash-sidebar-container">
       <div className="sidebar-box">
         <NavLink
-          to="/dashboard"
+          to="/seller/dashboard"
           exact
           onClick={handleNavLinkClick}
           className={({ isActive }) =>

@@ -74,7 +74,7 @@ export const useRegisterSeller = () => {
          email: "",
          password: "",
          confirmPassword : "",
-         role : 'Buyer',
+         role : 'Seller',
          shopName : "",
          shopAddress : ""
       },
@@ -95,7 +95,7 @@ export const useRegisterSeller = () => {
                      position: "bottom-left",
                   });
                   localStorage.setItem('user', 'buyer')
-                  navigate('/')
+                  navigate('/seller/dashboard')
                },
                onError:  async (res) => {
                   errorToast({
@@ -131,7 +131,7 @@ export const useRegister = () => {
          email: "",
          password: "",
          confirmPassword : "",
-         role : 'Seller',
+         role : 'Buyer',
       },
       validateOnBlur: false,
       validateOnChange: true,
@@ -150,7 +150,7 @@ export const useRegister = () => {
                      position: "bottom-left",
                   });
                   localStorage.setItem('user', 'buyer')
-                  navigate('/dashboard')
+                  navigate('/')
                },
                onError:  async (res) => {
                   errorToast({
