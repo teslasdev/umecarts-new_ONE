@@ -2,12 +2,12 @@ import {
   MdOutlineDeleteForever,
   MdOutlineDownloadForOffline,
 } from "react-icons/md";
-import { PiWarningCircleBold } from "react-icons/pi";
+import { RiErrorWarningLine } from "react-icons/ri";
 const UploadModal = () => {
   return (
     <div className="pro-modal-container">
       <div className="lis-item-box">
-        <PiWarningCircleBold className="sha mod-icon" />
+        <RiErrorWarningLine className="sha mod-icon" />
         <div className="item-tst">Details</div>
       </div>
       <div className="lis-item-box">

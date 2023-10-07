@@ -1,4 +1,4 @@
-import { PiWarningCircleBold } from "react-icons/pi";
+import { RiErrorWarningLine } from "react-icons/ri";
 import "../../styles/dash-css/mainSide.css";
 import WarningModal from "./modal/warningModal";
 import { useState } from "react";
@@ -19,7 +19,7 @@ const MainSide = () => {
             Your sales increased by <span>3%</span> this week. Keep it up with
             these new tips!
           </div>
-          <PiWarningCircleBold
+          <RiErrorWarningLine
             className="cancel hnd"
             size={25}
             onClick={handleWarningIcon}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Badge } from '../common/Badge'
-import {BiErrorCircle} from 'react-icons/bi'
+import {RiErrorWarningLine} from 'react-icons/ri'
 import {AiOutlineEye,AiOutlineEyeInvisible} from 'react-icons/ai'
 import {MdCheckBox,MdCheckBoxOutlineBlank} from 'react-icons/md'
 import { Link } from 'react-router-dom'
@@ -24,30 +24,30 @@ const Seller = () => {
             {/* Inputs */}
             <div className='w-full flex flex-col py-4'>
               <input type="text" placeholder='Firstname' className='um-sign-field'/>
-              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
+              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><RiErrorWarningLine />Information error</span>
             </div>
 
             <div className='w-full flex flex-col py-4'>
               <input type="text" placeholder='Email Address' className='um-sign-field'/>
-              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
+              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><RiErrorWarningLine />Information error</span>
             </div>
 
             <div className='w-full flex flex-col  py-4'>
               <input type="text" placeholder='Phone number' className='um-sign-field'/>
-              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
+              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><RiErrorWarningLine />Information error</span>
             </div>
 
 
             <div className='relative z-10 w-full flex flex-col  py-4'>
               <span className='um-sign-icon'  onClick={() => setToggle(!toggle)} >{toggle ? <AiOutlineEye/> : <AiOutlineEyeInvisible/>}</span>
               <input type={toggle ? 'password' : 'text'} placeholder='Password' className='um-sign-field'/>
-              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
+              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><RiErrorWarningLine />Information error</span>
             </div>
 
             <div className='relative z-10 w-full flex flex-col  py-4'>
               <span className='um-sign-icon'  onClick={() => setToggle(!toggle)} >{toggle ? <AiOutlineEye/> : <AiOutlineEyeInvisible/>}</span>
               <input type={toggle ? 'password' : 'text'} placeholder='Confirm Password' className='um-sign-field'/>
-              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
+              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><RiErrorWarningLine />Information error</span>
             </div>
 
             <div>
@@ -59,12 +59,12 @@ const Seller = () => {
                 <input type='text' placeholder='Shop Name' className='um-sign-field w-4/5'/>
                 <p>.umecarts.com</p>
               </div>
-              <span class="text-sm flex items-center gap-1 pt-2"><BiErrorCircle />Your shop name will be used as prefix for your personal domain</span>
+              <span class="text-sm flex items-center gap-1 pt-2"><RiErrorWarningLine />Your shop name will be used as prefix for your personal domain</span>
             </div>
 
             <div className='w-full flex flex-col  py-4'>
               <input type="text" placeholder='Shop Address' className='um-sign-field'/>
-              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><BiErrorCircle />Information error</span>
+              <span class="text-sm text-red-500 font-bold flex items-center gap-1 pt-2"><RiErrorWarningLine />Information error</span>
             </div>
 
 

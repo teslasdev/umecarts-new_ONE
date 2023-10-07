@@ -3,7 +3,7 @@ import { BsGrid, BsHandbag, BsCart, BsCloudUpload } from "react-icons/bs";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
 import { HiOutlineReceiptRefund } from "react-icons/hi";
-import { PiWarningCircleBold } from "react-icons/pi";
+import { RiErrorWarningLine } from "react-icons/ri";
 import { TiDocumentText } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import { MdPayment, MdOutlineSettings } from "react-icons/md";
@@ -106,7 +106,7 @@ const DashSidebar = ({ toggleIcon }) => {
             isActive ? "active-link sidebar-item-box" : "sidebar-item-box"
           }
         >
-          <PiWarningCircleBold />
+          <RiErrorWarningLine />
           <div className="sidebar-text">Support ticket</div>
         </NavLink>
         <NavLink

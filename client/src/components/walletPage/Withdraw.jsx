@@ -1,4 +1,4 @@
-import { PiWarningCircleBold } from "react-icons/pi";
+import { RiErrorWarningLine } from "react-icons/ri";
 import { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import BankCard from "./BankCard";
@@ -61,7 +61,7 @@ const WithdrawSection = () => {
             </div>
             <div className="cu-pay">
               Amount Payable: <span>₦98,000</span>
-              <PiWarningCircleBold
+              <RiErrorWarningLine
                 className="cancel hnd"
                 size={12}
                 onClick={handleWarningIcon}
