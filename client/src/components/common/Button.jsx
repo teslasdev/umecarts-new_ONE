@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Loader from './Loader'
 
 export const Button = ({
   auth,
@@ -14,7 +15,7 @@ export const Button = ({
   return (
     <div>
       {auth === 'button' ?
-        <button type={type} onClick={onClick} className={className} disabled={disabled}>{isLoading ? 'Loading....' : name}</button>
+        <button type={type} onClick={onClick} className={className} disabled={disabled}>{isLoading ? <Loader /> : name}</button>
         :
         <Link className={className} to={link}>{name}</Link>
       }
@@ -28,12 +29,13 @@ export const PrimaryButton = ({
   type,
   link,
   name,
-  click
+  click,
+  isLoading
 }) => {
   return (
-    <div>
+    <div className='h-full w-full'>
       {type ?
-        <button onClick={click} className={`${classNameButton}`}>{name}</button>
+        <button type="submit" onClick={click} className={`${classNameButton}`}>{isLoading ? <Loader /> : name}</button>
         :
         <Link className={`${classNameButton}`} to={link}>{name}</Link>
       }

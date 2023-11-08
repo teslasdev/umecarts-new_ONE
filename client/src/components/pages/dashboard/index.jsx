@@ -1,5 +1,6 @@
 // import DashSidebar from "../../dashComponents/dashSidebar";
 // import DashNavbar from "../../dashComponents/navbar";
+import { useEffect } from "react";
 import "../../../styles/dash-css/style.css";
 import MainSide from "../../dashComponents/mainSide";
 // import DashFooter from "../../dashComponents/dashFooter";
@@ -8,15 +9,14 @@ import MainSide from "../../dashComponents/mainSide";
 // import MobileMenu from "../../dashComponents/mobileMenu";
 // import DashProduct from "./product";
 import DashLayout from "../../layout/DashLayout";
+import { getAuthToken } from "../../../helper/axiosConfig";
+import isEmpty from "../../../utils/isEmpty";
+import { getGlobalState, setGlobalState } from "../../common/store";
+import { useNavigate } from "react-router";
+import { useGetUser } from "../../../helper/api-hooks/useAuth";
 
 const Dashboard = () => {
-  // const [toggleIcon, setToggleIcon] = useState(false);
-  // const handleToggleIcon = () => {
-  //   setToggleIcon(true);
-  // };
-  // const handleCloseToggleIcon = () => {
-  //   setToggleIcon(false);
-  // };
+  const navigate = useNavigate();  
   return (
     <div className="dashboard-container">
       <DashLayout>

@@ -3,8 +3,12 @@ import logo from "../../assets/logo/Vector.png";
 import { AiOutlineBell } from "react-icons/ai";
 import { HiMenuAlt2 } from "react-icons/hi";
 import grove from "../../assets/image/grovlogo.png";
+import { getGlobalState } from "../common/store";
+import isEmpty from "../../utils/isEmpty";
 const DashNavbar = ({ handleToggleIcon }) => {
+  const user  = getGlobalState('user');
   return (
+    
     <div className="dash-navbar-container">
       <div className="logo-image">
         <img src={logo} className="um-dash-logo" />
@@ -13,7 +17,7 @@ const DashNavbar = ({ handleToggleIcon }) => {
         <div className="grov-image-mill">
           <img src={grove} className="um-grov-logo" />
           <div className="grov-drink-box">
-            <div className="grov-txt">Grove Mill</div>
+            <div className="grov-txt">{!isEmpty(user) && user?.shop.shopName}</div>
             <div className="product-cat-con">
               <div className="cat-it rm">
                 <div className="cat-item">Drinks</div>

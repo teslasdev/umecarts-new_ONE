@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashNavbar from "../dashComponents/navbar";
 import DashSidebar from "../dashComponents/dashSidebar";
 import DashFooter from "../dashComponents/dashFooter";
@@ -15,10 +15,6 @@ const DashLayout = ({ children }) => {
   };
   return (
     <>
-      {/* <Header />
-                {children}
-            <Footer />
-           {isPortrait &&  <Navigation />} */}
       <DashNavbar handleToggleIcon={handleToggleIcon} />
       {toggleIcon && (
         <MobileMenu

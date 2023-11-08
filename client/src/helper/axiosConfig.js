@@ -32,6 +32,7 @@ const axiosInstance = axios.create({
     common: {
       Authorization: getAuthorizationHeader(),
     },
+    "x-access-token" : getAuthToken()
   },
 });
 

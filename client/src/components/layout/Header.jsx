@@ -4,18 +4,23 @@ import logo from "../../assets/logo/Vector.png";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RxCaretDown } from "react-icons/rx";
 import {FaUserPlus,FaUserCheck, FaRegUserCircle} from 'react-icons/fa'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { setGlobalState } from "../common/store";
+import { getAuthToken } from "../../helper/axiosConfig";
+import isEmpty from "../../utils/isEmpty";
+import { useGetUser } from "../../helper/api-hooks/useAuth";
 
 
 const Header = () => {
+  const navigate = useNavigate(); 
   const isTabletOrMobile = useMediaQuery({ query: "(min-width: 500px)" });
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
   const [toggleOption, setToggleOption] = useState(false);
+  const [AuthToken , setToken] = useState(false)
 
   const [scrollDirection, setScrollDirection] = useState(null);
   useEffect(() => {
@@ -32,7 +37,16 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", updateScrollDirection); // clean up
     };
+
   }, [scrollDirection]);
+  const { refetch, status  } = useGetUser();
+  useEffect(() => {
+    // Getting token 
+    if(status == 'success') {
+      setToken(true)
+    }
+      refetch()
+  })
   return (
     <>
       <header
@@ -58,13 +72,15 @@ const Header = () => {
 
             {/* Options */}
             <div className="um-header-options">
-              {/* <div className="flex gap-1 items-center px-2">
+            {AuthToken &&
+              <div className="flex gap-1 items-center px-2">
                 <IoChatboxEllipsesOutline size={15} color="#1F3047" />
                 <p className="font-semibold">Chat</p>
                 <div className="w-[15px] h-[15px] bg-[#002C66] flex justify-center items-center text-white text-[8px] rounded-full">
                   2
                 </div>
-              </div> */}
+              </div> 
+            }
 
               <div className="flex gap-1 items-center px-2">
                 <FiShoppingCart size={20} color="#1F3047" />
@@ -73,14 +89,15 @@ const Header = () => {
                   1
                 </div>
               </div>
-
-              {/* <div className="flex gap-1 items-center px-2">
+              {AuthToken &&
+              <div className="flex gap-1 items-center px-2">
                 <FaRegUserCircle size={15} color="#1F3047" />
                 <p>Account</p>
                 <div>
                   <RxCaretDown size={18} />
                 </div>
-              </div> */}
+              </div> 
+              }
 
               <div className="flex gap-1 items-center px-2">
                 <IoMdNotificationsOutline
@@ -93,6 +110,7 @@ const Header = () => {
                   1
                 </div>
               </div>
+              {!AuthToken &&
               <div className='relative um-header-button cursor-pointer flex items-center gap-2 justify-center h-[50px] rounded-md' onClick={() => setToggleOption(!toggleOption)}>
                 <h4 className="text-[18px] font-bold">
                   Sign in
@@ -111,6 +129,7 @@ const Header = () => {
                   </div>
                 )}
               </div>
+              }
               <div className="um-header-seller rounded-md flex justify-center items-center text-[20px] cursor-pointer">
                 <Link to="/user/seller">Be a seller</Link>
               </div>

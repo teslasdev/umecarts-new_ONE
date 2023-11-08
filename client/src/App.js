@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home, User, Auth, Account, Product } from "./components";
 
@@ -20,10 +20,23 @@ import Support from "./components/pages/dashboard/Support";
 import Coupon from "./components/pages/dashboard/Coupon";
 import ShopSetting from "./components/pages/dashboard/ShopSetting";
 import AddProduct from "./components/pages/dashboard/product/addProduct";
+import { setGlobalState } from "./components/common/store";
+import { useGetUser } from "./helper/api-hooks/useAuth";
+import Loader from "./components/common/Loader";
 
 
 const App = () => {
+  const [AuthToken , setAuth] = useState(false)
   AOS.init();
+  const { data, isLoading ,refetch, status  } = useGetUser();
+  useEffect(() => {
+    // Getting token 
+    if(status == 'success') {
+      setAuth(true)
+      setGlobalState('user' , data)
+    }
+      refetch()
+  })
   const router = createBrowserRouter([
     {
       path: "/",
@@ -117,9 +130,11 @@ const App = () => {
   ]);
   return (
     <>
+      {isLoading ? <Loader /> :
       <main>
         <RouterProvider router={router}></RouterProvider>
       </main>
+      }
     </>
   );
 };

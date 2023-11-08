@@ -1,8 +1,9 @@
 .pro-card-container {
-  width: 250px;
+  width: 187px;
   border-radius: 8px;
-  border: 1.5px solid #f0f7ff;
-  background: #fff;
+}
+.pro-img {
+  background-position: center;
 }
 .pro-img-con {
   width: 100%;
@@ -163,22 +164,22 @@ input:checked + .slider:before {
 }
 @media only screen and (max-width: 1300px) {
   .pro-card-container {
-    width: 200px;
+    width: 160px;
   }
 }
 @media only screen and (max-width: 1070px) {
   .pro-card-container {
-    width: 180px;
+    width: 140px;
   }
 }
 @media only screen and (max-width: 1000px) {
   .pro-card-container {
-    width: 200px;
+    width: 120px;
   }
 }
 @media only screen and (max-width: 920px) {
   .pro-card-container {
-    width: 170px;
+    width: 160px;
   }
   .toggle-switch {
     width: 45px;

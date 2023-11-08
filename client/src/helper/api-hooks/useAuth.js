@@ -5,7 +5,7 @@ import { TOKEN_VALUE, useUrls } from "../useUrls";
 import { LoginSchema, RegisterSchema, RegisterShopSchema } from "../schema/auth";
 import { errorToast, successToast } from "../../components/common/CustomToast";
 import { useNavigate } from "react-router";
-import { useGlobalState } from "../../components/common/store";
+import { setGlobalState, useGlobalState } from "../../components/common/store";
 
 // Login a user
 
@@ -33,11 +33,12 @@ export const useLogin = () => {
                  localStorage.setItem(TOKEN_VALUE, res.data.accessToken);
                   axiosInstance.defaults.headers.common.Authorization =
                      res.data.accessToken;
-                  queryClient.setQueryData(["user"], res.response);
+                  queryClient.setQueryData(["user"], res.data);
                   successToast({
                      message: "Logged in successfully",
                      position: "bottom-left",
                   });
+                  
                   navigate('/')
                },
                onError:  async (res) => {
@@ -144,7 +145,7 @@ export const useRegister = () => {
                  localStorage.setItem(TOKEN_VALUE, res.data.accessToken);
                   axiosInstance.defaults.headers.common.Authorization =
                      res.data.accessToken;
-                  queryClient.setQueryData(["user"], res.response);
+                  queryClient.setQueryData(["user"], res.data);
                   successToast({
                      message: "Registration successfully",
                      position: "bottom-left",
@@ -170,3 +171,14 @@ export const useRegister = () => {
  
    return { formik, isLoading };
 };
+
+// Get user details
+export const useGetUser = () => {
+   const { getUserUrl } = useUrls();
+   const { data, isLoading, refetch , status } = useQuery(["user"], ({ signal }) =>
+      axiosInstance
+      .get(getUserUrl, { signal })
+      .then((res) => res.data.data)
+   );
+   return { data, isLoading, refetch , status };
+ };
