@@ -2,7 +2,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { useState } from "react";
 import UploadModal from "./modal/uploadModal";
 const UploadCardFile = ({
-   item
+  item
 }) => {
   const [uploadToggleIcon, setUploadToggleIcon] = useState(false);
   const handleUploadToggleIcon = () => {

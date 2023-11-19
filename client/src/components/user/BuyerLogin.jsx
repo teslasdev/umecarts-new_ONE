@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Badge } from '../common/Badge'
 import {BiErrorCircle} from 'react-icons/bi'
 import {AiOutlineEye,AiOutlineEyeInvisible} from 'react-icons/ai'
@@ -6,13 +6,13 @@ import {MdCheckBox,MdCheckBoxOutlineBlank} from 'react-icons/md'
 import {Button} from '../common/Button'
 import { Link } from 'react-router-dom'
 import Social from '../common/Social'
-import { useLogin } from '../../helper/api-hooks/useAuth'
+import { useGetUser, useLogin } from '../../helper/api-hooks/useAuth'
+import { setGlobalState } from '../common/store'
 
 const Buyer = () => {
   const [checkbox,setCheckbox] = useState(false)
   const [toggle, setToggle] = useState(true)
   const { formik, isLoading } = useLogin();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     formik.handleSubmit();

@@ -11,15 +11,12 @@ const UploadFile = () => {
   const {data , isLoading, refetch} = useGallery()
   const [searchToggleIcon, setSearchToggleIcon] = useState(false);
   const [isOpen , setIsOpen] = useState(false)
+  const [Gallery , setGallery] = useState([])
   const handleSearchToggleIcon = () => {
     setSearchToggleIcon(!searchToggleIcon);
   };
   useEffect(() => {
-    if (!data?.gallery) {
-      refetch();
-    }
-
-    console.log(data?.gallery)
+    refetch();
   }, [])
   return (
     <DashLayout>
@@ -68,7 +65,7 @@ const UploadFile = () => {
         </div>
       </div>
       {isOpen &&
-        <UploadFileModal onClick={() => setIsOpen(!isOpen)}/>
+        <UploadFileModal  onlyUpload={true} onClick={() => setIsOpen(!isOpen)} setOpen={setIsOpen} setGallery={setGallery} Gallery={Gallery} />
       }
     </DashLayout>
   );

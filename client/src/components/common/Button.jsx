@@ -15,7 +15,7 @@ export const Button = ({
   return (
     <div>
       {auth === 'button' ?
-        <button type={type} onClick={onClick} className={className} disabled={disabled}>{isLoading ? <Loader /> : name}</button>
+        <button type={type} onClick={onClick} className={`${disabled && 'opacity-90'}   ${className}`} disabled={disabled}>{isLoading ? <Loader /> : name}</button>
         :
         <Link className={className} to={link}>{name}</Link>
       }

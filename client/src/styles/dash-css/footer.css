@@ -1,7 +1,6 @@
 .dash-footer-container {
   background: var(--dark-primary-blue);
   color: #fff;
-  display: flex;
   justify-content: space-between;
   padding: 5px 8rem;
   align-items: center;

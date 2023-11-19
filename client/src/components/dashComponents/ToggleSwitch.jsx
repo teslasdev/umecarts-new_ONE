@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-const ToggleSwitch = () => {
-  const [isToggled, setIsToggled] = useState(false);
-
+const ToggleSwitch = ({
+  isToggled,
+  setIsToggled
+}) => {
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };

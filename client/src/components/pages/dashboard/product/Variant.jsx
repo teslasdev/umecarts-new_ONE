@@ -4,10 +4,11 @@ import { TiDeleteOutline } from 'react-icons/ti'
 import { RiDeleteBinLine } from 'react-icons/ri'
 import { BsDash, BsPlus } from 'react-icons/bs'
 import { ActionInput, PrimaryInput } from '../../../common/Inputs'
+import isEmpty from '../../../../utils/isEmpty'
 
 const Variant = ({
    data,
-   index
+   index,
 }) => {
    const [isOpen , setOpen] = useState(false)
    return (

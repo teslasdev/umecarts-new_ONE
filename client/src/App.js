@@ -20,24 +20,84 @@ import Support from "./components/pages/dashboard/Support";
 import Coupon from "./components/pages/dashboard/Coupon";
 import ShopSetting from "./components/pages/dashboard/ShopSetting";
 import AddProduct from "./components/pages/dashboard/product/addProduct";
-import { setGlobalState } from "./components/common/store";
+import { setGlobalState, useGlobalState } from "./components/common/store";
 import { useGetUser } from "./helper/api-hooks/useAuth";
-import Loader from "./components/common/Loader";
+import NoFound from "./components/pages/404";
+import isEmpty from "./utils/isEmpty";
+import PreviewProduct from "./components/pages/dashboard/product/PreviewProduct";
 
 
 const App = () => {
-  const [AuthToken , setAuth] = useState(false)
+  const guest = JSON.parse(localStorage.getItem('guest'))
   AOS.init();
-  const { data, isLoading ,refetch, status  } = useGetUser();
+  const { data , refetch, status  } = useGetUser();
   useEffect(() => {
     // Getting token 
     if(status == 'success') {
-      setAuth(true)
       setGlobalState('user' , data)
+      localStorage.setItem('shopName', data?.shop.shopName)
     }
-      refetch()
-  })
-  const router = createBrowserRouter([
+    refetch()
+  } ,[])
+
+
+  const isGuest = createBrowserRouter([
+    {
+      path: "*",
+      element: <NoFound />,
+    },
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/user/buyer",
+      element: <User auth="buyer" />,
+    },
+    {
+      path: "/user/seller",
+      element: <User auth="seller" />,
+    },
+
+    {
+      path: "/auth/login",
+      element: <Auth auth="true" />,
+    },
+    {
+      path: "/forgotPassword",
+      element: <Account auth="forget" />,
+    },
+    {
+      path: "/product/:id",
+      element: <Product />,
+    },
+    {
+      path: "/cart",
+      element: <CartController />,
+    },
+    {
+      path: "/checkout",
+      element: <CheckoutController />,
+    },
+    {
+      path: "/checkout/delivery_info",
+      element: <DeliveryController />,
+    },
+    {
+      path: "/checkout/payment_info",
+      element: <PaymentController />,
+    },
+    {
+      path: "/checkout/completion",
+      element: <CompletionController />,
+    }
+  ]);
+
+  const isSeller = createBrowserRouter([
+    {
+      path: "*",
+      element: <NoFound />,
+    },
     {
       path: "/",
       element: <Home />,
@@ -96,6 +156,10 @@ const App = () => {
       element: <AddProduct />,
     },
     {
+      path: "/seller/preview/:slug",
+      element: <PreviewProduct />,
+    },
+    {
       path: "/dashorder",
       element: <DashOrder />,
     },
@@ -130,10 +194,14 @@ const App = () => {
   ]);
   return (
     <>
-      {isLoading ? <Loader /> :
-      <main>
-        <RouterProvider router={router}></RouterProvider>
-      </main>
+      {isEmpty(guest) ?
+        <main>
+          <RouterProvider router={isGuest}></RouterProvider>
+        </main>
+      :
+        <main>
+          <RouterProvider router={isSeller}></RouterProvider>
+        </main>
       }
     </>
   );

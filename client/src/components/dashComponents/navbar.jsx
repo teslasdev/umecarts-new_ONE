@@ -7,6 +7,7 @@ import { getGlobalState } from "../common/store";
 import isEmpty from "../../utils/isEmpty";
 const DashNavbar = ({ handleToggleIcon }) => {
   const user  = getGlobalState('user');
+  console.log(user)
   return (
     
     <div className="dash-navbar-container">
@@ -17,7 +18,7 @@ const DashNavbar = ({ handleToggleIcon }) => {
         <div className="grov-image-mill">
           <img src={grove} className="um-grov-logo" />
           <div className="grov-drink-box">
-            <div className="grov-txt">{!isEmpty(user) && user?.shop.shopName}</div>
+            <div className="grov-txt">{localStorage.getItem('shopName')}</div>
             <div className="product-cat-con">
               <div className="cat-it rm">
                 <div className="cat-item">Drinks</div>

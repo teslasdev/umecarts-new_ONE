@@ -10,6 +10,7 @@ import { setGlobalState, useGlobalState } from "../../components/common/store";
 // Login a user
 
 export const useLogin = () => {
+   
    const navigate = useNavigate();
    const { loginUrl } = useUrls();
    const queryClient = useQueryClient();
@@ -38,8 +39,14 @@ export const useLogin = () => {
                      message: "Logged in successfully",
                      position: "bottom-left",
                   });
-                  
-                  navigate('/')
+                  if(res.data.role.includes("ROLE_SELLER")) {
+                     localStorage.setItem('guest' , JSON.stringify(false))
+                     setGlobalState('user' , res.data)
+                     navigate('/seller/dashboard')
+                  }
+                  else {
+                     navigate('/')
+                  }
                },
                onError:  async (res) => {
                   errorToast({
@@ -95,8 +102,8 @@ export const useRegisterSeller = () => {
                      message: "Registration successfully",
                      position: "bottom-left",
                   });
-                  localStorage.setItem('user', 'buyer')
-                  navigate('/seller/dashboard')
+                  navigate('/auth/login')
+                  
                },
                onError:  async (res) => {
                   errorToast({

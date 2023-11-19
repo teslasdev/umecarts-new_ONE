@@ -6,7 +6,7 @@ import { CgCheck } from "react-icons/cg"
 import ToggleSwitch from "../dashComponents/ToggleSwitch"
 import { getGlobalState, setGlobalState, useGlobalState } from "./store"
 import { useBrand, useCategory } from "../../helper/api-hooks/useGeneral"
-import { BiSearch } from "react-icons/bi"
+import { BiErrorCircle, BiSearch } from "react-icons/bi"
 
 export const DropdownDefault = ({
    close,
@@ -30,11 +30,18 @@ export const DropdownDefault = ({
    setGender,
    gender,
    size,
-   setSize
+   setSize,
+   name,
+   onChange,
+   onBlur,
+   error,
+   setProvider,
+   discount,
+   setDiscount,
 }) => {
   const [isOpen , setOpen] = useState(false)
   const [select, setSelect] = useState('')
-  const [selectMultiple, setSelectMultiple] = useState([])
+  const [brands, setBrands] = useGlobalState('brands')
   const [selectIndex, setSelectIndex] = useState(0)
   const {refetch} = useCategory();
   const handleSelect = async (value , idx) => {
@@ -42,20 +49,24 @@ export const DropdownDefault = ({
     if(!Multiple) {
       setSelect(value)
       setOpen(false);
-      setSelectMultiple([])
       switch(TypeOf) {
         case 'Category' :
           setGlobalState('categoryId', idx)
           refetch()
         break;
+        case 'Brand' :
+          setBrands(value)
+        break;
+        case 'Provider' :
+          setProvider(value)
+        break;
+        case 'Discount' :
+          setDiscount(value)
+        break;
       }
     }
     else {
       switch(TypeOf) {
-        case 'Brand' :
-          var boxArrayToset = setSelectMultiple
-          var boxArray = selectMultiple
-        break;
         case 'Attributes' :
           var boxArrayToset = setAttribute
           var boxArray = attributes
@@ -101,9 +112,6 @@ export const DropdownDefault = ({
     refetch()
   })
   switch(TypeOf) {
-    case 'Brand':
-      var selectedLabel = selectMultiple
-    break;
     case 'Attributes' : 
       var selectedLabel = attributes
     break;
@@ -117,6 +125,7 @@ export const DropdownDefault = ({
       var selectedLabel = size
     break;
   }
+  const [isToggled , setIsToggled] = useState(false)
   return (
    <>
         <div className='relative w-[100%]'>
@@ -124,12 +133,12 @@ export const DropdownDefault = ({
               <div className="flex justify-between items-center">
                 <label className='font-bold'>{label}</label>
                 {activator &&
-                  <ToggleSwitch />
+                  <ToggleSwitch setIsToggled={() => setIsToggled(!isToggled)}/>
                 }
               </div>
             
             <div type={type} className='um-sign-field bg-white border-[1.5px]  border-[#94a3b879] w-full cursor-pointer flex items-center' onClick={() => setOpen(!isOpen)}>
-              <input type="hidden" className="bg-transparent cursor-pointer" value={select}  placeholder={placeholder} disabled={disabled} onClick={() => setOpen(!isOpen)} />
+              <input type="hidden" className="bg-transparent cursor-pointer" value={select} name={name} onChange={onChange} onBlur={onBlur} placeholder={placeholder}  onClick={() => setOpen(!isOpen)} />
               {Multiple ? 
                 <p className="text-[#777777]">{isEmpty(selectedLabel) ?  placeholder : selectedLabel.join(',')}</p> : 
                 <p className="text-[#777777]">{isEmpty(select) ?  placeholder : select}</p>}
@@ -142,7 +151,7 @@ export const DropdownDefault = ({
               }
             </span>
           </div>
-          {isOpen &&
+          {activator ? isToggled && isOpen &&
           <div className={`absolute ${zIndex} w-full overflow-y-scroll top-full  min-h-[120px] max-h-[250px] bg-white rounded-md shadow-lg`}>
             <div className="flex item-center um-sign-field w-full  bg-white border-[1.5px] border-[#94a3b879] px-2">
               <span class="w-[5%] h-[100%] flex justify-center items-center">
@@ -177,11 +186,50 @@ export const DropdownDefault = ({
                   )
                })}
             </ul>
-         </div>
+          </div>
+          : isOpen &&
+          <div className={`absolute ${zIndex} w-full overflow-y-scroll top-full  min-h-[120px] max-h-[250px] bg-white rounded-md shadow-lg`}>
+            <div className="flex item-center um-sign-field w-full  bg-white border-[1.5px] border-[#94a3b879] px-2">
+              <span class="w-[5%] h-[100%] flex justify-center items-center">
+                <BiSearch />
+              </span>
+              <input type="text" className='border-none outline-none h-full w-[80%]' />
+            </div>
+            <ul className=''>
+              {isEmpty(options) && 
+                <div className="flex justify-center items-center h-[70px]">Not Data</div>
+              }
+              <li className='pl-2 py-2'>{dropLabel}</li>
+                {options.map((item , index) => {
+                  return  (
+                    <div className="flex gap-1 hover:bg-red-500 hover:text-white w-full px-6 items-center" onClick={() => handleSelect(item.name , item.id)} key={index}>
+                    {!isEmpty(item.color) &&
+                    <div className={`w-[15px] flex h-[15px] rounded-sm border border-gray-200`} style={{backgroundColor : item.color}}/>
+                    }
+                    <li className='w-full pl-2 py-2 px-6 cursor-pointer hover:bg-red-500 hover:text-white border-b border-[#fafafa37]'>{item.name}</li>
+                    {selectedLabel && 
+                      selectedLabel.map((selected) => {
+                        if(selected === item.name) {
+                          return (
+                            <span>
+                              <CgCheck size={22}/>
+                            </span>
+                          )
+                        }
+                      }) 
+                    }
+                    </div>
+                  )
+               })}
+            </ul>
+          </div>
           }
       </div>
       {info &&
       <span class="text-xs flex items-center gap-1"><RiErrorWarningLine />{infoText}</span>
+      }
+      {error &&
+        <span class={`${!error && 'hidden'} text-sm text-red-500 font-bold flex items-center gap-1 px-1`}><BiErrorCircle /> {error}</span> 
       }
    </>
    )

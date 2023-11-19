@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 
-const Editor = () => {
-   const [description, setDescription] = useState("");
+const Editor = ({
+   description,
+   setDescription
+}) => {
    var toolbarOptions = [
       ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
       ['blockquote', 'code-block'],
@@ -30,8 +32,8 @@ const Editor = () => {
       setDescription(editor.getHTML());
    }
    return (
-      <div className='w-full h-[90%]'>
-         <ReactQuill modules={module} theme="snow" value={description} className='h-[90%]  pt-5 rounded-[80px]' onChange={onEditorStateChange}/>
+      <div className='w-full md:h-[90%]'>
+         <ReactQuill modules={module} theme="snow" value={description} className='md:h-[90%] h-[70%] z-20  pt-5 rounded-[80px]' onChange={onEditorStateChange}/>
       </div>
    )
 }
